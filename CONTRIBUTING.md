@@ -17,8 +17,8 @@ Before you start contributing, please take a moment to read the following guidel
 
 - Ensure you have Node.js and MongoDB installed on your local machine.
 - Fork the repository on GitHub.
-- Clone your forked repository locally: `git clone https://github.com/your-username/repository-name.git`
-- Change your directory to the project: `cd repository-name`
+- Clone your forked repository locally: `git clone https://github.com/Kritika30032002/Blog_Website.git`
+- Change your directory to the project: `cd Blog_Website`
 - Install project dependencies: `npm install`
 
 ## How Can I Contribute?
