@@ -9,3 +9,7 @@
 #### Name: [Dhandeep10](https://github.com/Dhandeep10)
 - Bio: Btech Student | Full Stack Developer 
 - GitHub: [Dhandeep10](https://github.com/Dhandeep10)
+
+#### Name: [Bhavya Verma](https://github.com/bhaavvya)
+- Bio: Btech Student | Full Stack Developer 
+- GitHub: [Bhavya Verma](https://github.com/bhaavvya)
