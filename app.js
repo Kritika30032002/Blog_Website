@@ -41,7 +41,9 @@ app.get("/contact", function(req, res) {
 app.get("/compose", function(req, res) {
   res.render("compose");
 });
-
+app.get('*', (req, res) => {
+  res.render('404');
+});
 app.post("/compose", function(req, res) {
 
   const post = {
