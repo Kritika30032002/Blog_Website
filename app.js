@@ -25,7 +25,6 @@ app.get("/", function(req, res) {
     blog1: homeStartingContent,
     posts:posts
   });
-
 });
 
 app.get("/about", function(req, res) {
@@ -43,11 +42,8 @@ app.get("/contact", function(req, res) {
 app.get("/compose", function(req, res) {
   res.render("compose");
 });
-app.get('*', (req, res) => {
-  res.render('404');
-});
-app.post("/compose", function(req, res) {
 
+app.post("/compose", function(req, res) {
   const post = {
     title: req.body.newTitle,
     blog: req.body.newBlog
@@ -57,7 +53,7 @@ app.post("/compose", function(req, res) {
 });
 
 app.get("/posts/:postName",function(req,res){
-  const requestedTitle = _.lowerCase(req.params.postName) ;
+  const requestedTitle = _.lowerCase(req.params.postName);
 
   posts.forEach(function(post){
     const storedTitle = _.lowerCase(post.title);
@@ -71,12 +67,11 @@ app.get("/posts/:postName",function(req,res){
 
   });
 
-  // });
 });
 
-
-
-
+app.get('*', (req, res) => {
+  res.render('404');
+});
 
 app.listen(PORT, function () {
   console.log(`Server started on port ${PORT}`);
