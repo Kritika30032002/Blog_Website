@@ -53,3 +53,16 @@
 	font-size: 12px;
   color: #fff;
 }
+
+/* styles.css */
+.main-content {
+  font-size: 24px; /* Adjust the value to your desired font size for the main content */
+}
+
+.post-title {
+  font-size: 24px; /* Adjust the value to your desired font size for post titles */
+}
+
+.post-content {
+  font-size: 18px; /* Adjust the value to your desired font size for post content */
+}
