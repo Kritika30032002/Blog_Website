@@ -1,3 +1,5 @@
+# Join the [Discord](https://discord.gg/5NDvQhZNED) for any further discussion 
+
 # Blog Website
 
 ## Introduction
