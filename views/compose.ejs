@@ -1,17 +1,33 @@
+
 <%- include("partials/header"); -%>
 
 <h1>Compose</h1>
 
-<form class="" action="/compose" method="post">
+<form class="" action="/compose" method="post" onsubmit="return validateForm();">
   <div class="form-group">
     <label>Title</label>
-      <input class="form-control" type="text" name="newTitle" >
+    <input class="form-control" type="text" name="newTitle" id="field1" required>
 
     <label>Post</label>
-      <textarea class="form-control" name="newBlog" rows="5" cols="30"></textarea>
+    <textarea class="form-control" name="newBlog" rows="5" cols="30" id="field2" required></textarea>
   </div>
 
-    <button class="btn btn-primary" type="submit" name="submit">Publish</button>
+  <button class="btn btn-primary" type="submit" name="submit">Publish</button>
 </form>
 
 <%- include("partials/footer"); -%>
+
+<script>
+  function validateForm() {
+    var title = document.getElementById('field1').value;
+    var post = document.getElementById('field2').value;
+
+    if (title.trim() === '' || post.trim() === '') {
+      alert("Title and Post cannot be empty");
+      return false;
+    }
+    return true;
+  }
+</script>
+
+
