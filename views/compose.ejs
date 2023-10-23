@@ -1,8 +1,8 @@
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 <%- include("partials/header"); -%>
-
 <h1>Compose</h1>
 
-<form class="" action="/compose" method="post" onsubmit="return validateForm();">
+<form class="" action="/compose" method="post" novalidate onsubmit="return validateForm();">
   <div class="form-group">
     <label>Title</label>
     <input class="form-control" type="text" name="newTitle" required>
@@ -16,7 +16,7 @@
 
 <%- include("partials/footer"); -%>
 
-<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <script>
   
   function validateForm() {
@@ -29,10 +29,10 @@
         text: "Title and Post cannot be empty",
         duration: 3000, 
         gravity: "top", 
+        position: "center", 
         backgroundColor: "red", 
       }).showToast();
-
-    
+     
       return false;
     }
     return true;
