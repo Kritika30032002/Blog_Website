@@ -46,11 +46,14 @@ app.get("/compose", function(req, res) {
 app.post("/compose", function(req, res) {
   const post = {
     title: req.body.newTitle,
+    // image: req.body.newImage, 
+    timestamp: new Date().toLocaleString(),
     blog: req.body.newBlog
   };
   posts.push(post);
   res.redirect("/");
 });
+
 
 app.get("/posts/:postName",function(req,res){
   const requestedTitle = _.lowerCase(req.params.postName);
