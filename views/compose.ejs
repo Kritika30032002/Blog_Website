@@ -2,16 +2,39 @@
 
 <h1>Compose</h1>
 
-<form class="" action="/compose" method="post">
+<form class="" action="/compose" method="post" onsubmit="return validateForm();">
   <div class="form-group">
     <label>Title</label>
-      <input class="form-control" type="text" name="newTitle" >
+    <input class="form-control" type="text" name="newTitle" required>
 
     <label>Post</label>
-      <textarea class="form-control" name="newBlog" rows="5" cols="30"></textarea>
+    <textarea class="form-control" name="newBlog" rows="5" cols="30" required></textarea>
   </div>
 
-    <button class="btn btn-primary" type="submit" name="submit">Publish</button>
+  <button class="btn btn-primary" type="submit" name="submit">Publish</button>
 </form>
 
 <%- include("partials/footer"); -%>
+
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script>
+  
+  function validateForm() {
+    var title = document.querySelector('input[name="newTitle"]').value;
+    var post = document.querySelector('textarea[name="newBlog"]').value;
+
+    if (title.trim() === '' || post.trim() === '') {
+      
+      Toastify({
+        text: "Title and Post cannot be empty",
+        duration: 3000, 
+        gravity: "top", 
+        backgroundColor: "red", 
+      }).showToast();
+
+    
+      return false;
+    }
+    return true;
+  }
+</script>
