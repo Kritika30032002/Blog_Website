@@ -11,10 +11,14 @@
       <div class="col-md-4 mb-4">
         <div class="card">
           <!-- <img src="<%= post.image %>" class="card-img-top" alt="Image Alt Text"> -->
-          <div class="card-body card-hover" style="background-color: #eee; width: 300px; height: max-content;">
-            <h3 class="card-title"><%= post.title %></h3>
-            <p class="card-text"><%= post.blog.substring(0, 100) + " ..." %></p>
-            <a href="/posts/<%= post.title %>" class="btn btn-primary">Read more</a>
+          <div class="card-header">
+            <h2 class="card-title"><%= post.title %></h2>
+          </div>
+          <div class="card-body card-hover" style="background-color:#e9dada; width: max-width; height: max-content;">
+            <div class="card-content">
+              <p class="card-text"><%= post.blog.substring(0, 100) + " ..." %></p>
+              <a href="/posts/<%= post.title %>" class="btn btn-primary">Read more</a>
+            </div>
           </div>
         </div>
       </div>
