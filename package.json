@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start":"node app",
-    "dev":"nodemon app",
+    "start": "node app",
+    "dev": "nodemon app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kritika Gupta",
@@ -18,6 +18,7 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "prettier": "3.0.3"
   }
 }
