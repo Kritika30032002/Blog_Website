@@ -1,28 +1,63 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
-<head>
-  <meta charset="utf-8">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <title>Daily Journal</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
-  <nav class="navbar navbar-default" style="min-height: 80px;">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/" style="font-size: 30px;">DAILY JOURNAL</a>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <title>Daily Journal</title>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-default" style="min-height: 80px">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/" style="font-size: 30px"
+            >DAILY JOURNAL</a
+          >
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li id="home">
+            <a href="/" style="font-size: 18px; padding: 20px 15px">HOME</a>
+          </li>
+          <li id="about">
+            <a href="/about" style="font-size: 18px; padding: 20px 15px"
+              >ABOUT US</a
+            >
+          </li>
+          <li id="contact">
+            <a href="/contact" style="font-size: 18px; padding: 20px 15px"
+              >CONTACT US</a
+            >
+          </li>
+          <% if(!user){ %>
+          <li id="contact">
+            <a href="/signup" style="font-size: 18px; padding: 20px 15px"
+              >SIGN UP</a
+            >
+          </li>
+          <li id="contact">
+            <a href="/signin" style="font-size: 18px; padding: 20px 15px"
+              >SIGN IN</a
+            >
+          </li>
+          <% }else{ %>
+          <li id="contact">
+            <form
+              action="/logout"
+              method="post"
+              style="font-size: 18px; padding: 20px 15px"
+            >
+              <button type="submit">LOG OUT</button>
+            </form>
+          </li>
+          <% } %>
+        </ul>
       </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li id="home"><a href="/" style="font-size: 18px; padding: 20px 15px;">HOME</a></li>
-        <li id="about"><a href="/about" style="font-size: 18px; padding: 20px 15px;">ABOUT US</a></li>
-        <li id="contact"><a href="/contact" style="font-size: 18px; padding: 20px 15px;">CONTACT US</a></li>
-      </ul>
-    </div>
-  </nav>
-</body>
-
+    </nav>
+  </body>
 </html>
-    <div class="container">
+<div class="container"></div>
