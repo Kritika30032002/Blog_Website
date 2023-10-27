@@ -4,12 +4,26 @@
   <br>
   <h1>Home</h1>
 
-  <p><%= blog1 %></p>
+  <p style="background-color:cornsilk;"><%= blog1 %></p>
 
-  <% posts.forEach(function(post){  %>
-    <h3><%= post.title %></h3>
-    <p><%= post.blog.substring(0, 100) + " ..." %> <a href="/posts/<%= post.title %>">Read more</a></p>
-  <% }); %>
+  <div class="row">
+    <% posts.forEach(function(post) { %>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <!-- <img src="<%= post.image %>" class="card-img-top" alt="Image Alt Text"> -->
+          <div class="card-header">
+            <h2 class="card-title"><%= post.title %></h2>
+          </div>
+          <div class="card-body card-hover" style="background-color:#e9dada; width: max-width; height: max-content;">
+            <div class="card-content">
+              <p class="card-text"><%= post.blog.substring(0, 100) + " ..." %></p>
+              <a href="/posts/<%= post.title %>" class="btn btn-primary">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% }); %>
+  </div>
 
   <div class="text-center">
     <a class="btn btn-success compose" href="/compose" type="button" name="button">Compose</a>

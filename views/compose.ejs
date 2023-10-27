@@ -9,6 +9,7 @@
 
     <label>Post</label>
     <textarea class="form-control" name="newBlog" rows="5" cols="30" required></textarea>
+    
   </div>
 
   <button class="btn btn-primary" type="submit" name="submit">Publish</button>
@@ -22,7 +23,7 @@
   function validateForm() {
     var title = document.querySelector('input[name="newTitle"]').value;
     var post = document.querySelector('textarea[name="newBlog"]').value;
-
+    
     if (title.trim() === '' || post.trim() === '') {
       
       Toastify({

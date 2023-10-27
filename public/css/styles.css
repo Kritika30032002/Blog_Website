@@ -1,26 +1,30 @@
-body{
+body {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  min-height: 100dvh;
+  min-height: 100vh;
+  background-color: #f4f4f4; /* Set your desired background color */
 }
+
 .container-fluid {
-    padding-top: 70px;
-    padding-bottom: 70px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
+
 .navbar {
-    padding-top: 15px;
-    padding: 15px;
-    border: 0;
-    border-radius: 0;
-    margin-bottom: 0;
-    font-size: 12px;
-    letter-spacing: 5px;
-    width: 100%;
+  padding-top: 15px;
+  padding: 15px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  letter-spacing: 5px;
+  width: 100%;
 }
-.navbar-nav  li a:hover {
-    color: #1abc9c !important;
+
+.navbar-nav li a:hover {
+  color: #1abc9c !important;
 }
 
 /* Make the navbar-brand text bold */
@@ -29,41 +33,102 @@ body{
   font-size: 24px;
 }
 
-.compose{
+.compose {
   margin: 20px;
   padding: 15px;
   font-size: 20px;
 }
 
-.compose:hover{
+.compose:hover {
   background-color: #1abc9c;
 }
-.compose a{
+
+.compose a {
   color: black;
-}
-
-.footer {
-	text-align: center;
-	width: 100%;
-	height: 60px;
-	background-color: #1abc9c;
-}
-
-.footer p ,.foot{
-	margin-top: 25px;
-	font-size: 12px;
+  text-decoration: none;
   color: #fff;
 }
 
-/* styles.css */
+.footer {
+  text-align: center;
+  width: 100%;
+  height: 60px;
+  background-color: #1abc9c;
+}
+
+.footer p, .foot {
+  margin-top: 25px;
+  font-size: 12px;
+  color: #fff;
+}
+
 .main-content {
-  font-size: 24px; /* Adjust the value to your desired font size for the main content */
+  font-size: 24px;
 }
 
 .post-title {
-  font-size: 24px; /* Adjust the value to your desired font size for post titles */
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .post-content {
-  font-size: 18px; /* Adjust the value to your desired font size for post content */
+  font-size: 18px;
+  color: #555;
+}
+
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #fff;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #f8f8f8;
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-left: 100px;
+  color: blue;
+}
+
+.card-title-header {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  
+}
+
+.card-content {
+  font-size: 16px;
+  color: #555;
+  padding: 15px;
+  
+}
+.card-text {
+    margin-left: 60px;
+}
+.btn-primary {
+  background-color: #1abc9c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #169c7f;
 }
