@@ -104,7 +104,7 @@ app.use("/", authRouter);
 app.get("*", (req, res) => {
   res.render("404");
 });
-
+console.log(process.env.MONGODB_URI);
 mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => console.log("connected"))
