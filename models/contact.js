@@ -8,4 +8,4 @@ const contactSchema = new Schema({
   message: String,
 });
 
-module.exports.User = mongoose.model("Contact", contactSchema);
+module.exports.Contact = mongoose.model("Contact", contactSchema);

@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 const session = require("express-session");
 const passport = require("passport");
 const authRouter = require("./routers/auth");
+const contactRouter = require("./routers/contact");
 const { User } = require("./models/auth");
 
 const homeStartingContent =
@@ -39,6 +40,7 @@ app.use(
 );
 app.use(express.static("public"));
 app.use(session(sessionConfig));
+app.use(express.json());
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(User.createStrategy());
@@ -100,11 +102,12 @@ app.get("/posts/:postName", function (req, res) {
 });
 
 app.use("/", authRouter);
+app.use("/", contactRouter);
 
 app.get("*", (req, res) => {
   res.render("404");
 });
-console.log(process.env.MONGODB_URI);
+
 mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => console.log("connected"))
