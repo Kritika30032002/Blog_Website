@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <nav class="navbar navbar-default" style="min-height: 80px">
+    <nav class="navbar navbar-default" id="navbar" style="min-height: 80px">
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="/" style="font-size: 30px"
@@ -21,26 +21,27 @@
         </div>
         <ul class="nav navbar-nav navbar-right">
           <li id="home">
-            <a href="/" style="font-size: 18px; padding: 20px 15px ; " >HOME</a>
+            <a href="/" style="font-size: 18px; padding: 20px 15px">HOME</a>
           </li>
           <li id="about">
             <a href="/about" style="font-size: 18px; padding: 20px 15px"
-              >ABOUT US</a>
+              >ABOUT US</a
+            >
           </li>
           <li id="contact">
             <a href="/contact" style="font-size: 18px; padding: 20px 15px"
-          >CONTACT US</a
+              >CONTACT US</a
             >
           </li>
           <% if(!user){ %>
           <li id="contact">
             <a href="/signup" style="font-size: 18px; padding: 20px 15px"
-            >SIGN UP</a
+              >SIGN UP</a
             >
           </li>
           <li id="contact">
             <a href="/signin" style="font-size: 18px; padding: 20px 15px"
-            >SIGN IN</a
+              >SIGN IN</a
             >
           </li>
           <% }else{ %>
@@ -54,9 +55,84 @@
             </form>
           </li>
           <% } %>
+          <li id="dark-mode-toggle">
+            <button
+              onclick="toggleDark()"
+              class="dark-mode-button"
+              style="font-size: 18px; padding: 20px 15px"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="sun-icon lucide lucide-sun"
+                style="color: black"
+              >
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 2v2" />
+                <path d="M12 20v2" />
+                <path d="m4.93 4.93 1.41 1.41" />
+                <path d="m17.66 17.66 1.41 1.41" />
+                <path d="M2 12h2" />
+                <path d="M20 12h2" />
+                <path d="m6.34 17.66-1.41 1.41" />
+                <path d="m19.07 4.93-1.41 1.41" />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="moon-icon lucide lucide-moon"
+                style="color: rgba(255, 255, 255, 0.5)"
+              >
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+              </svg>
+            </button>
+          </li>
         </ul>
       </div>
     </nav>
+    <script>
+      function toggleDark() {
+        const body = document.body;
+        const navbar = document.getElementById("navbar");
+        const footer = document.getElementById("footer");
+        body.classList.toggle("dark-mode");
+        navbar.classList.toggle("dark-mode");
+        footer.classList.toggle("dark-mode");
+
+        const isDarkB = body.classList.contains("dark-mode");
+        const isDarkN = navbar.classList.contains("dark-mode");
+        const isDarkF = footer.classList.contains("dark-mode");
+        localStorage.setItem("darkMode", isDarkB, isDarkN, isDarkF);
+      }
+      document.addEventListener("DOMContentLoaded", () => {
+        const isDarkB = localStorage.getItem("darkMode") === "true";
+        const isDarkN = localStorage.getItem("darkMode") === "true";
+        const isDarkF = localStorage.getItem("darkMode") === "true";
+        const body = document.body;
+        const navDark = document.getElementById("navbar");
+        const footer = document.getElementById("footer");
+
+        if (isDarkB && isDarkN && isDarkF) {
+          body.classList.add("dark-mode");
+          navDark.classList.add("dark-mode");
+          footer.classList.add("dark-mode");
+        }
+      });
+    </script>
   </body>
 </html>
 <div class="container"></div>
