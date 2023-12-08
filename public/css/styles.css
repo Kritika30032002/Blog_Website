@@ -25,7 +25,33 @@ body {
 
 .navbar-nav li a:hover {
   color: #1abc9c !important;
+  
+  transition: color 0.5s ease-in-out;
+  
+
 }
+.navbar-nav li a::before {
+  content: "";
+  position: absolute;
+  background: #1abc9c;
+  width: 80%;
+  height: 4px;
+  left: 10%;
+  bottom: 15px;
+  transform: scaleY(0);
+  transition: 0.5s ease-out; 
+  
+}
+
+.navbar-nav li a:hover::before {
+  transform: scaleY(1);
+  bottom: 15px;
+  width: 80%;
+  
+} 
+
+
+
 
 /* Make the navbar-brand text bold */
 .navbar-brand {
@@ -131,4 +157,11 @@ body {
 
 .btn-primary:hover {
   background-color: #169c7f;
+  
 }
+
+/* a.navlinks:hover{
+  text-decoration: underline;
+
+} */
+
