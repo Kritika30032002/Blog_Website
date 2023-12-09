@@ -144,7 +144,7 @@ body {
   margin-left: 60px;
 }
 .btn-primary {
-  background-color: #1abc9c;
+  background-color: #169c7f;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -155,10 +155,11 @@ body {
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.2s;
+  outline:none;
 }
 
 .btn-primary:hover {
-  background-color: #169c7f;
+  background-color:#a1e2d6;
 }
 
 body.dark-mode {
