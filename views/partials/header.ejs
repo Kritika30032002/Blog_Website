@@ -12,12 +12,15 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
+    
     <nav class="navbar navbar-default" id="navbar" style="min-height: 80px">
       <div class="container">
+        <div class="navbar-logo">
+          <a href="#" id="logo"></a>
+        </div>
         <div class="navbar-header">
-          <a class="navbar-brand" href="/" style="font-size: 30px"
-            >DAILY JOURNAL</a
-          >
+            <a class="navbar-brand" href="/" style="font-size: 30px"
+            >DAILY JOURNAL</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
           <li id="home">
@@ -25,12 +28,12 @@
           </li>
           <li id="about">
             <a href="/about" style="font-size: 18px; padding: 20px 15px"
-              >ABOUT US</a
+            >ABOUT US</a
             >
           </li>
           <li id="contact">
             <a href="/contact" style="font-size: 18px; padding: 20px 15px"
-              >CONTACT US</a
+            >CONTACT US</a
             >
           </li>
           <% if(!user){ %>
@@ -41,18 +44,18 @@
           </li>
           <li id="contact">
             <a href="/signin" style="font-size: 18px; padding: 20px 15px"
-              >SIGN IN</a
+            >SIGN IN</a
             >
           </li>
           <% }else{ %>
           <li id="contact">
             <form
-              action="/logout"
-              method="post"
-              style="font-size: 18px; padding: 20px 15px"
+            action="/logout"
+            method="post"
+            style="font-size: 18px; padding: 20px 15px"
             >
-              <button type="submit">LOG OUT</button>
-            </form>
+            <button type="submit">LOG OUT</button>
+          </form>
           </li>
           <% } %>
           <li id="dark-mode-toggle">
@@ -60,9 +63,9 @@
               onclick="toggleDark()"
               class="dark-mode-button"
               style="font-size: 18px; padding: 20px 15px"
-            >
+              >
               <svg
-                xmlns="http://www.w3.org/2000/svg"
+              xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"

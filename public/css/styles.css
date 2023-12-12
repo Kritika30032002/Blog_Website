@@ -28,7 +28,6 @@ body {
     background-color 0.5s,
     color 0.5s;
 }
-
 .navbar-nav li a:hover {
   color: #1abc9c !important;
   transition: color 0.5s ease-in-out;
@@ -57,6 +56,16 @@ body {
   font-size: 24px;
 }
 
+.navbar-logo {
+  width: 100px; /* Adjust the width as needed */
+  height: 80px; /* Adjust the height as needed */
+  background-image: url('Black_logo.png'); /* Replace with the path to your image */
+  background-size: contain; 
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-left: -480px;
+  color: #555;
+}
 .compose {
   margin: 20px;
   padding: 15px;
@@ -79,8 +88,8 @@ body {
   height: 60px;
   background-color: #1abc9c;
   transition:
-    background-color 0.5s,
-    color 0.5s;
+  background-color 0.5s,
+  color 0.5s;
 }
 
 .footer p,
@@ -110,8 +119,8 @@ body {
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition:
-    transform 0.2s,
-    box-shadow 0.2s;
+  transform 0.2s,
+  box-shadow 0.2s;
   background-color: #fff;
 }
 
@@ -209,3 +218,4 @@ body.dark-mode .sun-icon {
 body.dark-mode .moon-icon {
   display: block;
 }
+
