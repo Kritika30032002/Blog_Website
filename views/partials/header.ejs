@@ -13,13 +13,20 @@
   </head>
   <body>
     <nav class="navbar navbar-default" id="navbar" style="min-height: 80px">
-      <div class="container">
+      <div class="container container-nav">
         <div class="navbar-header">
           <a class="navbar-brand" href="/" style="font-size: 30px"
             >DAILY JOURNAL</a
           >
         </div>
+
+        <!-- toggel bar button  -->
+        <ul class="nav toggel-nav" onclick="toggelNavigation()">
+          <img src="https://assets.stickpng.com/images/588a64e0d06f6719692a2d10.png"  width="40px">
+        </ul>
         <ul class="nav navbar-nav navbar-right">
+         
+          <!-- hello worlds -->
           <li id="home">
             <a href="/" style="font-size: 18px; padding: 20px 15px">HOME</a>
           </li>
@@ -132,6 +139,23 @@
           footer.classList.add("dark-mode");
         }
       });
+
+      function toggelNavigation() {
+        const body = document.body;
+        const toggelNav = document.getElementsByClassName('toggel-nav');
+        const nav = document.querySelector('.container-nav .navbar-nav');
+
+        if( nav.style.display === 'none'){
+          nav.style.display = 'block'; 
+          toggelNav.style.border = '2px solid green';
+        }
+        else{
+          nav.style.display = 'none'
+        }
+
+        
+
+      }
     </script>
   </body>
 </html>

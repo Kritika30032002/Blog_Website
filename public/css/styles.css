@@ -4,7 +4,8 @@ body {
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #f4f4f4; /* Set your desired background color */
+  background-color: #f4f4f4;
+  /* Set your desired background color */
   transition:
     background-color 0.5s,
     color 0.5s;
@@ -33,6 +34,7 @@ body {
   color: #1abc9c !important;
   transition: color 0.5s ease-in-out;
 }
+
 .navbar-nav li a::before {
   content: "";
   position: absolute;
@@ -140,9 +142,11 @@ body {
   color: #555;
   padding: 15px;
 }
+
 .card-text {
   margin-left: 60px;
 }
+
 .btn-primary {
   background-color: #1abc9c;
   color: #fff;
@@ -208,4 +212,84 @@ body.dark-mode .sun-icon {
 
 body.dark-mode .moon-icon {
   display: block;
+}
+
+
+
+/*mobile tab icon displaying none */
+.toggel-nav {
+  display: none;
+}
+
+.container-nav .navbar-nav {
+  display: block;
+}
+
+
+
+/* adding mediaquery for improving responsiveness of header  */
+@media screen and (max-width:1210px) {
+
+  .toggel-nav {
+    display: block;
+    width: 40px;
+    height: 40px;
+    /* border: 2px solid transparent; */
+  }
+  .container-nav .navbar-nav {
+    display: none;
+  }
+  .container-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-brand {
+    width: 350px;
+  }
+  .container-nav .navbar-header {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* navbar styling in mobile tab  */
+  .navbar-nav::before {
+    content: '';
+    position: absolute;
+    background-color: #161b1a;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: .9;
+    z-index: -1;
+  }
+
+  .container-nav .navbar-nav {
+    top: 100px;
+    left: 0;
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    overflow-x: hidden;
+    height: 80vh;
+    z-index: 10;
+    display: block;
+  }
+
+  .container-nav>.navbar-nav>li {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+@media screen and (min-width:1210px) {
+  .container-nav .navbar-nav {
+    display: block;
+  }
 }
