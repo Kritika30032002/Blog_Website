@@ -1,0 +1,24 @@
+<%- include("partials/header"); -%>
+<div class="row">
+    <% blogs.forEach(function(blog) { %>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title"><%= blog.title %></h2>
+        </div>
+        <div
+          class="card-body card-hover"
+          style="width: max-width; height: max-content"
+        >
+          <div class="card-content">
+            <p class="card-text"><%= blog.content.substring(0, 100) + " ..." %></p>
+            <a href="/blogs/<%= blog.title %>" class="btn btn-primary"
+              >Read more</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <% }); %>
+  </div>
+<%- include("partials/footer"); -%>

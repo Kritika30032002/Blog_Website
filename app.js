@@ -9,7 +9,8 @@ const passport = require("passport");
 const authRouter = require("./routers/auth");
 const contactRouter = require("./routers/contact");
 const { User } = require("./models/auth");
-
+const blogsData=require('./blog.json')
+const blogs=blogsData.blogs
 const homeStartingContent =
   "Step into the world of words with our user-friendly blog platform! Whether you're a seasoned writer or just getting started, our intuitive interface makes composing and editing blogs a breeze! Join our community of storytellers, where your unique voice is celebrated. Ready to share your thoughts? Click the 'Compose' button below and let your creativity flow! Your blogging journey begins here.";
 const aboutContent =
@@ -96,6 +97,25 @@ app.get("/posts/:postName", function (req, res) {
       res.render("post", {
         nextBlogTitle: post.title,
         nextBlog: post.blog,
+      });
+    }
+  });
+});
+
+app.get("/blogs", function (req, res) {
+  res.render("blogs",{blogs: blogsData.blogs});
+});
+
+app.get("/blogs/:blogName", function (req, res) {
+  const requestedTitle = _.lowerCase(req.params.blogName);
+
+  blogs.forEach(function (blog) {
+    const storedTitle = _.lowerCase(blog.title);
+
+    if (storedTitle === requestedTitle) {
+      res.render("post", {
+        nextBlogTitle: blog.title,
+        nextBlog: blog.content,
       });
     }
   });
