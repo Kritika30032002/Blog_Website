@@ -1,3 +1,4 @@
+
 body {
   display: flex;
   justify-content: space-between;
@@ -22,15 +23,71 @@ body {
   border-radius: 0;
   margin-bottom: 0;
   font-size: 12px;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
   width: 100%;
   transition:
     background-color 0.5s,
     color 0.5s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #565555;
+  background: none;
+  border: none;
+  background-color: #9f9d9d;
+  border-radius: 4px;
+  padding: 5px;
+
+}
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
 }
 .navbar-nav li a:hover {
   color: #1abc9c !important;
   transition: color 0.5s ease-in-out;
+}
+@media (max-width: 850px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #bdbdbd;
+    z-index: 1;
+  }
+
+  .menu.show {
+    display: flex;
+    margin-top: 140px;
+    border-radius: 3px;
+  }
+
+  .menu-toggle {
+    display: block;
+    text-align: center;
+    margin-left: 45%;
+  }
+
+  .menu-toggle.show {
+   display: block;
+  }
 }
 .navbar-nav li a::before {
   content: "";
@@ -49,7 +106,6 @@ body {
   bottom: 15px;
   width: 80%;
 }
-
 /* Make the navbar-brand text bold */
 .navbar-brand {
   font-weight: 800;
@@ -65,6 +121,19 @@ body {
   display: inline-block;
   margin-left: -480px;
   color: #555;
+}
+@media(max-width:765px) {
+    .navbar-logo {
+    width: 100px; /* Adjust the width as needed */
+    height: 80px; /* Adjust the height as needed */
+    background-image: url('Black_logo.png'); /* Replace with the path to your image */
+    background-size: contain; 
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-left: 30%;
+    color: #555;
+  }
+  
 }
 .compose {
   margin: 20px;
