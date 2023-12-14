@@ -1,4 +1,5 @@
 {
+    "type": "module",
     "blogs": [
         {
             "id": 1,
@@ -14,9 +15,10 @@
         },
         {
             "id": 3,
-            "title": "Nourishing the Soul: Culinary Adventures",
+            "title": "Culinary Adventures",
             "author": "Epicurean Explorer",
             "content": "Embark on a culinary journey to nourish your soul and delight your taste buds. Explore diverse flavors, textures, and aromas that elevate the dining experience. Start with simple pleasures – a homemade meal shared with loved ones. Experiment with ingredients, infuse creativity into your dishes, and savor the joy of cooking. Venture beyond your comfort zone and indulge in global cuisines. Discover the stories behind each recipe and the cultural tapestry woven into every bite. From the sizzle of a pan to the harmony of spices, culinary adventures awaken the senses. Embrace the art of cooking as a form of self-expression and a celebration of life's rich tapestry."
         }
     ]
 }
+
