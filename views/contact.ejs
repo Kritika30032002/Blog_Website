@@ -29,6 +29,7 @@
         type="text"
         id="name"
         name="name"
+        id="name"
         required
         style="
           width: 100%;
@@ -45,6 +46,7 @@
         type="email"
         id="email"
         name="email"
+        id="email"
         required
         style="
           width: 100%;
@@ -61,6 +63,7 @@
         id="message"
         name="message"
         rows="4"
+        id="message"
         required
         style="
           width: 100%;
@@ -74,6 +77,7 @@
 
       <button
         type="submit"
+        id="send_button"
         style="
           background-color: #1abc9c;
           color: #fff;
@@ -88,5 +92,51 @@
     </form>
   </section>
 </main>
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+  var btn=document.getElementById("send_button");
+  btn.addEventListener('click', function(e){
+      var name=document.getElementById("name").value;
+      var email=document.getElementById("email").value;
+      var message=document.getElementById("message").value;
+      e.preventDefault();
+          Email.send({
+          Host : "smtp.elasticemail.com",
+          Username : "vivekkr694@gmail.com",
+          Password : "1A3F58F4591CE14F3B8093F7F2E8C6668F97",
+          To : 'vikramkr1729@gmail.com',
+          From : `${email}`,
+          Subject : `Name: ${name}`,
+          Body : `<br><br> ${message} <br><br> <strong>Name:<\strong> ${name} <br> <strong>Email:<\strong> ${email}`
+      }).then(
+          async message => {
+              if (message=="OK"){
+                  await Swal.fire({
+                      title: "Success!",
+                      text: "Message Sent Successfully!",
+                      icon: "success",
+                      background:"#1A1A1A",
+                      color:"#fff",
+                      customClass: "swal-size-sm",
+                  });
+              }
+              else{
+                  await Swal.fire({
+                      icon: "error",
+                      title: "Oops...",
+                      text: "Something went wrong!",
+                      background:"#1A1A1A",
+                      color:"#fff",
+                      customClass: "swal-size-sm",
+                  });
+              }
+          }
+      ).then(async (res)=> {
+          await window.location.reload()
+      }
+      )
+  })
+  
+</script>
 <%- include("partials/footer"); -%>
