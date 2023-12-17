@@ -218,4 +218,11 @@ body.dark-mode .sun-icon {
 body.dark-mode .moon-icon {
   display: block;
 }
-
+.popup_class{
+  width:400px;
+}
+.swal-size-sm 
+{
+   width: 600px !important;
+   font-size: 2rem;
+}
