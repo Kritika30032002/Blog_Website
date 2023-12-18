@@ -125,7 +125,7 @@ app.use("/", authRouter);
 app.use("/", contactRouter);
 
 app.get("*", (req, res) => {
-  res.render("404");
+  res.status(404).render("404");
 });
 
 mongoose
