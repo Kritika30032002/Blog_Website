@@ -9,13 +9,22 @@
 
     <label>Post</label>
     <textarea class="form-control" name="newBlog" rows="5" cols="30" required></textarea>
-    
+    <div id="editor"></div>
   </div>
 
   <button class="btn btn-primary" type="submit" name="submit">Publish</button>
 </form>
 
 <%- include("partials/footer"); -%>
+
+<script src="https://cdn.ckeditor.com/ckeditor5/40.2.0/classic/ckeditor.js"></script>
+<script>
+	ClassicEditor
+		.create( document.querySelector( '#editor' ) )
+		.catch( error => {
+			console.error( error );
+		} );
+</script>
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <script>
