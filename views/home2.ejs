@@ -1,0 +1,50 @@
+<%- include("partials/header"); -%>
+
+<div class="container main-content">
+  <br />
+  <h1>Home</h1>
+
+  <p><%= blog1 %></p>
+
+  <div class="row">
+    <% posts.forEach(function(post) { %>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <!-- <img src="<%= post.image %>" class="card-img-top" alt="Image Alt Text"> -->
+        <div class="card-header">
+          <h2 class="card-title"><%= post.title %></h2>
+        </div>
+        <div
+          class="card-body card-hover"
+          style="width: max-width; height: max-content"
+        >
+          <div class="card-content">
+            <p class="card-text"><%= post.blog.substring(0, 100) + " ..." %></p>
+            <a href="/posts/<%= post.title %>" class="btn btn-primary"
+              >Read more</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <% }); %>
+  </div>
+
+  <div class="text-center">
+    <button
+    class="btn btn-success compose"
+    id="compose_button"
+    type="button"
+    onclick="window.location.href='/compose'"
+  >Compose</button>
+      <a
+        class="btn btn-success compose mx-2"
+        href="/blogs"
+        type="button"
+        name="button"
+        >Read Blogs</a
+      >
+  </div>
+</div>
+
+<%- include("partials/footer"); -%>

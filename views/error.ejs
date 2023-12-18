@@ -1,0 +1,27 @@
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<div class="container text-center my-4" style="color: aliceblue;
+background-color: black;
+position: absolute;
+top: 33vh;
+left:23vw;
+width:49vw;
+height:22vh;
+text-align: center;
+font-size: 3rem;
+padding-top: 2rem;" id="y1"><%= error1 %></div>
+<button class="btn" onclick="window.location.href='/'" style="color:black;
+background-color: aqua;
+position: absolute;
+top: 73vh;
+left:43vw;">HOME</button>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script>
+  Toastify({
+    text: document.getElementById('y1').innerText,
+    duration: 3000, 
+    gravity: "top", 
+    position: "center", 
+    backgroundColor: "red", 
+   } ).showToast();
+</script>
+ 

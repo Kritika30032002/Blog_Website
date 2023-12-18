@@ -10,7 +10,8 @@ const authRouter = require("./routers/auth");
 const contactRouter = require("./routers/contact");
 const { User } = require("./models/auth");
 const blogsData=require('./blog.json')
-const blogs=blogsData.blogs
+const blogs1=blogsData.blogs
+const fs = require('fs');
 const homeStartingContent =
   "Step into the world of words with our user-friendly blog platform! Whether you're a seasoned writer or just getting started, our intuitive interface makes composing and editing blogs a breeze! Join our community of storytellers, where your unique voice is celebrated. Ready to share your thoughts? Click the 'Compose' button below and let your creativity flow! Your blogging journey begins here.";
 const aboutContent =
@@ -58,6 +59,13 @@ app.use((req, res, next) => {
 app.get("/", function (req, res) {
   res.render("home", {
     blog1: homeStartingContent,
+    posts: [],
+  });
+});
+
+app.get("/home", function (req, res) {
+  res.render("home2", {
+    blog1: homeStartingContent,
     posts: posts,
   });
 });
@@ -83,8 +91,15 @@ app.post("/compose", function (req, res) {
     title: req.body.newTitle,
     blog: req.body.newBlog,
   };
+  const post1 = {
+    title: req.body.newTitle,
+    content: req.body.newBlog,
+  };
   posts.push(post);
-  res.redirect("/");
+  blogsData.blogs.push(post1)
+  const jsonString = JSON.stringify(blogsData, null, 2);
+  fs.writeFileSync('./blog.json', jsonString, 'utf-8');
+  res.redirect("/home");
 });
 
 app.get("/posts/:postName", function (req, res) {
@@ -106,10 +121,14 @@ app.get("/blogs", function (req, res) {
   res.render("blogs",{blogs: blogsData.blogs});
 });
 
+app.get("/error", function (req, res) {
+  res.render("error",{error1: "Unauthorised Access"});
+});
+
 app.get("/blogs/:blogName", function (req, res) {
   const requestedTitle = _.lowerCase(req.params.blogName);
 
-  blogs.forEach(function (blog) {
+  blogsData.blogs.forEach(function (blog) {
     const storedTitle = _.lowerCase(blog.title);
 
     if (storedTitle === requestedTitle) {
