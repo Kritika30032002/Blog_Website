@@ -1,3 +1,4 @@
+
 body {
   display: flex;
   justify-content: space-between;
@@ -9,7 +10,10 @@ body {
     background-color 0.5s,
     color 0.5s;
 }
-
+.nav1{
+  display: flex;
+  justify-content: space-between;
+}
 .container-fluid {
   padding-top: 70px;
   padding-bottom: 70px;
@@ -22,15 +26,74 @@ body {
   border-radius: 0;
   margin-bottom: 0;
   font-size: 12px;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
   width: 100%;
   transition:
     background-color 0.5s,
     color 0.5s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 25px;
+  color: #565555;
+  background: none;
+  border: none;
+  background-color: rgba(99, 99, 99, 0.3);
+  border-radius: 4px;
+  padding: 2px;
+  height: 50%;
+  margin-top: 7px;
+}
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+
+.menu a {
+  text-decoration: none;
+  font-size: 18px;
 }
 .navbar-nav li a:hover {
   color: #1abc9c !important;
   transition: color 0.5s ease-in-out;
+}
+@media (max-width: 746px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(70, 69, 69, 0.95);
+    z-index: 1;
+  }
+  
+  .menu.show {
+    display: flex;
+    margin-top: 50px;
+    border-radius: 3px;
+  }
+  .menu li a{
+    text-align: center;
+  }
+  .menu-toggle {
+    display: block;
+    text-align: center;
+  }
+.navbar-brand{
+  text-align: center;
+}
+  .menu-toggle.show {
+   display: block;
+  }
 }
 .navbar-nav li a::before {
   content: "";
@@ -49,23 +112,24 @@ body {
   bottom: 15px;
   width: 80%;
 }
-
 /* Make the navbar-brand text bold */
 .navbar-brand {
-  font-weight: 800;
+  font-weight: 750;
   font-size: 24px;
 }
-
+.logo-brand{
+  display: flex;
+  justify-content: space-between;
+}
 .navbar-logo {
   width: 100px; /* Adjust the width as needed */
   height: 80px; /* Adjust the height as needed */
   background-image: url('Black_logo.png'); /* Replace with the path to your image */
   background-size: contain; 
   background-repeat: no-repeat;
-  display: inline-block;
-  margin-left: -480px;
   color: #555;
 }
+
 .compose {
   margin: 20px;
   padding: 15px;
