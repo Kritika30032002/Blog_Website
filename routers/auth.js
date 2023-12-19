@@ -14,7 +14,7 @@ router.route("/signup").get(signUpPage).post(signUp);
 router
   .route("/signin")
   .get(signinPage)
-  .post(passport.authenticate("local"), signIn);
+  .post(passport.authenticate("local",{failureRedirect:'/error'}), signIn);
 
 router.post("/logout", logOut);
 
