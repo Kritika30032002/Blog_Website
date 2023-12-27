@@ -13,6 +13,7 @@ body {
 .nav1{
   display: flex;
   justify-content: space-between;
+  
 }
 .container-fluid {
   padding-top: 70px;
@@ -62,12 +63,13 @@ body {
 }
 .navbar-nav li a:hover {
   color: #1abc9c !important;
+  
   transition: color 0.5s ease-in-out;
 }
 @media (max-width: 746px) {
   .menu {
     display: none;
-    flex-direction: column;
+    
     position: absolute;
     top: 60px;
     left: 0;
@@ -99,7 +101,8 @@ body {
   content: "";
   position: absolute;
   background: #1abc9c;
-  width: 80%;
+ 
+  width: 100%;
   height: 4px;
   left: 10%;
   bottom: 15px;
@@ -289,4 +292,16 @@ body.dark-mode .moon-icon {
 {
    width: 600px !important;
    font-size: 2rem;
+}
+
+@media screen  and (max-width: 992px){
+#unorderlist 
+{
+display: none;  
+
+}
+#toogleicon{
+  display: block;
+
+}
 }
