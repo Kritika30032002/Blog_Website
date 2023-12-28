@@ -13,45 +13,44 @@
   </head>
   <body>
     
-    <nav class="navbar navbar-default" id="navbar" style="min-height: 80px">
+    <nav class="navbar navbar-default" id="navbar" style="position: relative; min-height: 80px">
       <div class="container">
         <div class="nav1">
-
           <div class="navbar-logo">
             <a href="#" id="logo"></a>
-          </div>
-          <div class="navbar-header">
-            <a class="navbar-brand" href="/" style="font-size: 30px"
+            <a class="navbar-brand" href="/" style="margin-left: 81px;  font-size: 30px"
             >DAILY JOURNAL</a>
           </div>
+
           <div>
-            <ul class="menu nav navbar-nav navbar-right">
-              <li id="home">
-                <a href="/" style="font-size: 18px; padding: 20px 15px">HOME</a>
+
+            <ul class="menu nav navbar-nav navbar-right" id="unorderlist"  >
+              <li id="home" >
+                <a class="lianchor" href="/" style="font-size: 15px; padding: 20px 15px">HOME</a>
               </li>
               <li id="about">
-                <a href="/about" style="font-size: 18px; padding: 20px 15px"
+                <a class="lianchor" href="/about" style="font-size: 15px; padding: 20px 15px"
                 >ABOUT US</a
                 >
               </li>
               <li id="contact">
-                <a href="/contact" style="font-size: 18px; padding: 20px 15px"
+                <a class="lianchor" href="/contact" style="font-size: 15px; padding: 20px 15px"
                 >CONTACT US</a
                 >
               </li>
               <% if(!user){ %>
-                <li id="contact">
-                  <a href="/signup" style="font-size: 18px; padding: 20px 15px"
+                <li id="contact" >
+                  <a class="lianchor" href="/signup" style="font-size: 15px; padding: 20px 15px"
                   >SIGN UP</a
                   >
                 </li>
-                <li id="contact">
-                  <a href="/signin" style="font-size: 18px; padding: 20px 15px"
+                <li id="contact" >
+                  <a class="lianchor" href="/signin" style="font-size: 15px; padding: 20px 15px"
             >SIGN IN</a
             >
           </li>
           <% }else{ %>
-            <li id="contact">
+            <li id="contact" >
               <form
               action="/logout"
               method="post"
@@ -61,10 +60,7 @@
             </form>
           </li>
           <% } %>
-        </ul>
-      </div>
-        <div>
-
+          
           <li id="dark-mode-toggle">
             <button
           onclick="toggleDark()"
@@ -111,8 +107,10 @@
         </svg>
       </button>
     </li>
-  </div>
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </ul>
+      </div>
+
+  <button  class="menu-toggle" id="toogleicon" onclick="toggleMenu()">☰</button>
 </div>
 </div>
 </nav>
