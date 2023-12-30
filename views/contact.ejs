@@ -1,13 +1,6 @@
 <%- include("partials/header"); -%>
 <main style="margin-top: 10px">
-  <section
-    id="contact-form"
-    style="
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    "
-  >
+  <section class="contact contact-default" id="contact">
     <h2
       style="
         font-size: 27px;
@@ -95,48 +88,45 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
-  var btn=document.getElementById("send_button");
-  btn.addEventListener('click', function(e){
-      var name=document.getElementById("name").value;
-      var email=document.getElementById("email").value;
-      var message=document.getElementById("message").value;
-      e.preventDefault();
-          Email.send({
-          Host : "smtp.elasticemail.com",
-          Username : "username_smtp",
-          Password : "generate_from_smtp_server",
-          To : 'your_email',
-          From : `${email}`,
-          Subject : `Name: ${name}`,
-          Body : `<br><br> ${message} <br><br> <strong>Name:<\strong> ${name} <br> <strong>Email:<\strong> ${email}`
-      }).then(
-          async message => {
-              if (message=="OK"){
-                  await Swal.fire({
-                      title: "Success!",
-                      text: "Message Sent Successfully!",
-                      icon: "success",
-                      background:"#1A1A1A",
-                      color:"#fff",
-                      customClass: "swal-size-sm",
-                  });
-              }
-              else{
-                  await Swal.fire({
-                      icon: "error",
-                      title: "Oops...",
-                      text: "Something went wrong!",
-                      background:"#1A1A1A",
-                      color:"#fff",
-                      customClass: "swal-size-sm",
-                  });
-              }
-          }
-      ).then(async (res)=> {
-          await window.location.reload()
-      }
-      )
-  })
-  
+  var btn = document.getElementById("send_button");
+  btn.addEventListener("click", function (e) {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+    e.preventDefault();
+    Email.send({
+      Host: "smtp.elasticemail.com",
+      Username: "username_smtp",
+      Password: "generate_from_smtp_server",
+      To: "your_email",
+      From: `${email}`,
+      Subject: `Name: ${name}`,
+      Body: `<br><br> ${message} <br><br> <strong>Name:<\strong> ${name} <br> <strong>Email:<\strong> ${email}`,
+    })
+      .then(async (message) => {
+        if (message == "OK") {
+          await Swal.fire({
+            title: "Success!",
+            text: "Message Sent Successfully!",
+            icon: "success",
+            background: "#1A1A1A",
+            color: "#fff",
+            customClass: "swal-size-sm",
+          });
+        } else {
+          await Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+            background: "#1A1A1A",
+            color: "#fff",
+            customClass: "swal-size-sm",
+          });
+        }
+      })
+      .then(async (res) => {
+        await window.location.reload();
+      });
+  });
 </script>
 <%- include("partials/footer"); -%>
