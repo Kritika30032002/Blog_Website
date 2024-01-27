@@ -58,6 +58,15 @@ SESSION_SECRET=your_session_secret
     ```node app.js```
 2. **Access the website**
    Open your web browser and navigate to http://localhost:3000 to access the blog website.
+ ## Our Amazing Contributors 
+
+
+<a align="center" href="https://github.com/Kritika30032002/Blog_Website/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Kritika30032002/Blog_Website" />  
+</a>
+
+
+
 
 ### Contributing
 We enthusiastically welcome contributions from the community. If you discover a bug or have an enhancement in mind, please don't hesitate to open an issue or create a pull request. Your input is invaluable to us.
