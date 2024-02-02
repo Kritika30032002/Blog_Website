@@ -93,6 +93,14 @@ body {
   .menu-toggle.show {
     display: block;
   }
+  #toogleicon{
+    position: absolute;
+    right: 20px;
+  }
+  .navbar-logo{
+    position: absolute;
+    left: 20px;
+  }
 }
 .navbar-nav li a::before {
   content: "";
@@ -129,7 +137,6 @@ body {
   background-repeat: no-repeat;
   color: #555;
 }
-
 .compose {
   margin: 20px;
   padding: 15px;
@@ -297,8 +304,35 @@ body.dark-mode .moon-icon {
   #toogleicon {
     display: block;
   }
-}
+  .menu {
+    display: none;
 
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(70, 69, 69, 0.95);
+    z-index: 1;
+  }
+  .menu.show {
+    display: flex;
+    margin-top: 50px;
+    border-radius: 3px;
+  }
+  .menu li a {
+    text-align: center;
+  }
+  .menu-toggle {
+    display: block;
+    text-align: center;
+  }
+  .navbar-brand {
+    text-align: center;
+  }
+  .menu-toggle.show {
+    display: block;
+  }
+}
 .contact {
   padding: 20px;
   border-radius: 5px;
