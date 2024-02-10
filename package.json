@@ -18,7 +18,7 @@
     "express-session": "^1.17.3",
     "lodash": "^4.17.21",
     "mongoose": "^7.6.3",
-    "passport": "^0.6.0",
+    "passport": "^0.7.0",
     "passport-local-mongoose": "^8.0.0"
   },
   "devDependencies": {
