@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en" dir="ltr">
-  <head>
+<head>
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <title>Daily Journal</title>
@@ -10,178 +10,208 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="/css/styles.css" />
-  </head>
-  <body>
+</head>
+<body>
     <nav
       class="navbar navbar-default"
       id="navbar"
       style="position: relative; min-height: 80px"
     >
-      <div class="container">
-        <div class="nav1">
-          <div class="navbar-logo">
-            <a href="#" id="logo"></a>
-            <a
+        <div class="container">
+            <div class="nav1">
+                <div class="navbar-logo">
+                    <a href="#" id="logo"></a>
+                    <a
               class="navbar-brand"
               href="/"
               style="margin-left: 81px; font-size: 30px"
               >DAILY JOURNAL</a
             >
-          </div>
+                </div>
 
-          <div>
-            <ul class="menu nav navbar-nav navbar-right" id="unorderlist">
-              <li id="home">
-                <a
+                <div>
+                    <ul class="menu nav navbar-nav navbar-right" id="unorderlist">
+                        <li id="home">
+                            <a
                   class="lianchor"
                   href="/"
                   style="font-size: 15px; padding: 20px 15px"
                   >HOME</a
                 >
-              </li>
-              <li id="about">
-                <a
+                        </li>
+                        <li id="blogs">
+                            <a
+                  class="lianchor"
+                  href="/blogs"
+                  style="font-size: 15px; padding: 20px 15px"
+                  >BLOGS</a
+                >
+                        </li>
+                        <li id="about">
+                            <a
                   class="lianchor"
                   href="/about"
                   style="font-size: 15px; padding: 20px 15px"
                   >ABOUT US</a
                 >
-              </li>
-              <li id="contact">
-                <a
+                        </li>
+                        <li id="contact">
+                            <a
                   class="lianchor"
                   href="/contact"
                   style="font-size: 15px; padding: 20px 15px"
                   >CONTACT US</a
                 >
-              </li>
-              <% if(!user){ %>
-              <li id="contact">
-                <a
+                        </li>
+                        <% if(!user){ %>
+                            <li id="signup">
+                                <a
                   class="lianchor"
                   href="/signup"
                   style="font-size: 15px; padding: 20px 15px"
                   >SIGN UP</a
                 >
-              </li>
-              <li id="contact">
-                <a
+                            </li>
+                            <li id="signin">
+                                <a
                   class="lianchor"
                   href="/signin"
                   style="font-size: 15px; padding: 20px 15px"
                   >SIGN IN</a
                 >
-              </li>
-              <% }else{ %>
-              <li id="contact">
-                <form
+                            </li>
+                            <% }else{ %>
+                                <li id="logout">
+                                    <form
                   action="/logout"
                   method="post"
                   style="font-size: 18px; padding: 20px 15px"
                 >
-                  <button type="submit">LOG OUT</button>
-                </form>
-              </li>
-              <% } %>
+                                        <button type="submit">LOG OUT</button>
+                                    </form>
+                                </li>
+                                <% } %>
 
-              <li id="dark-mode-toggle">
-                <button
+                                    <li id="dark-mode-toggle">
+                                        <button
                   onclick="toggleDark()"
                   class="dark-mode-button"
-                  style="font-size: 18px; padding: 20px 15px"
+                                            style="font-size: 18px; padding: 20px 15px"
                 >
-                  <svg
+                                            <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
-                    viewBox="0 0 24 24"
+                                                viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
                     stroke-width="2"
-                    stroke-linecap="round"
+                                                stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="sun-icon lucide lucide-sun"
+                                                class="sun-icon lucide lucide-sun"
                     style="color: black"
                   >
-                    <circle cx="12" cy="12" r="4" />
-                    <path d="M12 2v2" />
-                    <path d="M12 20v2" />
-                    <path d="m4.93 4.93 1.41 1.41" />
-                    <path d="m17.66 17.66 1.41 1.41" />
-                    <path d="M2 12h2" />
-                    <path d="M20 12h2" />
-                    <path d="m6.34 17.66-1.41 1.41" />
-                    <path d="m19.07 4.93-1.41 1.41" />
-                  </svg>
-                  <svg
+                                                <circle cx="12" cy="12" r="4" />
+                                                <path d="M12 2v2" />
+                                                <path d="M12 20v2" />
+                                                <path d="m4.93 4.93 1.41 1.41" />
+                                                <path d="m17.66 17.66 1.41 1.41" />
+                                                <path d="M2 12h2" />
+                                                <path d="M20 12h2" />
+                                                <path d="m6.34 17.66-1.41 1.41" />
+                                                <path d="m19.07 4.93-1.41 1.41" />
+                                            </svg>
+                                            <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
-                    viewBox="0 0 24 24"
+                                                viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
                     stroke-width="2"
-                    stroke-linecap="round"
+                                                stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="moon-icon lucide lucide-moon"
-                    style="color: rgba(255, 255, 255, 0.5)"
+                                                class="moon-icon lucide lucide-moon"
+                                                style="color: rgba(255, 255, 255, 0.5)"
                   >
-                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-                  </svg>
-                </button>
-              </li>
-            </ul>
-          </div>
+                                                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                                            </svg>
+                                        </button>
+                                    </li>
+                    </ul>
+                </div>
 
-          <button class="menu-toggle" id="toogleicon" onclick="toggleMenu()">
-            ☰
-          </button>
+                <button class="menu-toggle" id="toogleicon" onclick="toggleMenu()">
+                    ☰
+                </button>
+            </div>
         </div>
-      </div>
     </nav>
     <script>
-      function toggleDark() {
-        const body = document.body;
-        const navbar = document.getElementById("navbar");
-        const footer = document.getElementById("footer");
-        const contact = document.getElementById("contact");
-        body.classList.toggle("dark-mode");
-        navbar.classList.toggle("dark-mode");
-        footer.classList.toggle("dark-mode");
-        contact.classList.toggle("dark-mode");
+        function toggleDark() {
+            const body = document.body;
+            const navbar = document.getElementById("navbar");
+            const footer = document.getElementById("footer");
+            const contact = document.getElementById("contact");
+            body.classList.toggle("dark-mode");
+            navbar.classList.toggle("dark-mode");
+            footer.classList.toggle("dark-mode");
+            contact.classList.toggle("dark-mode");
 
-        const isDarkB = body.classList.contains("dark-mode");
-        const isDarkN = navbar.classList.contains("dark-mode");
-        const isDarkF = footer.classList.contains("dark-mode");
-        const isDarkc = contact.classList.contains("dark-mode");
-        localStorage.setItem("darkMode", isDarkB, isDarkN, isDarkF, isDarkc);
-      }
-      document.addEventListener("DOMContentLoaded", () => {
-        const isDarkB = localStorage.getItem("darkMode") === "true";
-        const isDarkN = localStorage.getItem("darkMode") === "true";
-        const isDarkF = localStorage.getItem("darkMode") === "true";
-        const isDarkc = localStorage.getItem("darkMode") === "true";
-        const body = document.body;
-        const navDark = document.getElementById("navbar");
-        const footer = document.getElementById("footer");
-        const contact = document.getElementById("contact");
-
-        if (isDarkB && isDarkN && isDarkF && isDarkc) {
-          body.classList.add("dark-mode");
-          navDark.classList.add("dark-mode");
-          footer.classList.add("dark-mode");
-          contact.classList.add("dark-mode");
+            const isDarkB = body.classList.contains("dark-mode");
+            const isDarkN = navbar.classList.contains("dark-mode");
+            const isDarkF = footer.classList.contains("dark-mode");
+            const isDarkc = contact.classList.contains("dark-mode");
+            localStorage.setItem("darkMode", isDarkB, isDarkN, isDarkF, isDarkc);
         }
-      });
+        document.addEventListener("DOMContentLoaded", () => {
+            const isDarkB = localStorage.getItem("darkMode") === "true";
+            const isDarkN = localStorage.getItem("darkMode") === "true";
+            const isDarkF = localStorage.getItem("darkMode") === "true";
+            const isDarkc = localStorage.getItem("darkMode") === "true";
+            const body = document.body;
+            const navDark = document.getElementById("navbar");
+            const footer = document.getElementById("footer");
+            const contact = document.getElementById("contact");
+
+            if (isDarkB && isDarkN && isDarkF && isDarkc) {
+                body.classList.add("dark-mode");
+                navDark.classList.add("dark-mode");
+                footer.classList.add("dark-mode");
+                contact.classList.add("dark-mode");
+            }
+
+
+            // Highlighting the selected nav item...
+
+            const aTagList = document.getElementsByTagName('a');
+            for (let index = 0; index < aTagList.length; index++) {
+                //  first removing all active nav items
+                const element = aTagList[0];
+                element.className.replace('active-nav-item', '');
+            }
+
+            const pathname = window.location.pathname.split('/');
+            let currentPath = pathname.length > 1 ? pathname[1] : pathname[1];
+            if (currentPath === "") {
+                currentPath = 'home';
+            }
+            const currentPathElement = document.getElementById(currentPath);
+            if (currentPathElement) {
+                const anchorElement = currentPathElement.firstElementChild;
+                anchorElement.setAttribute('class', `${anchorElement} active-nav-item`);
+            }
+
+        });
     </script>
     <script>
-      function toggleMenu() {
-        const menu = document.querySelector(".menu");
-        menu.classList.toggle("show");
-        const menuToggle = document.querySelector(".menu-toggle");
-        menuToggle.classList.toggle("show");
-      }
+        function toggleMenu() {
+            const menu = document.querySelector(".menu");
+            menu.classList.toggle("show");
+            const menuToggle = document.querySelector(".menu-toggle");
+            menuToggle.classList.toggle("show");
+        }
     </script>
-  </body>
+</body>
 </html>
 <div class="container"></div>

@@ -93,6 +93,13 @@ body {
 
   transition: color 0.5s ease-in-out;
 }
+
+.active-nav-item {
+    color: #1abc9c !important;
+  
+    transition: color 0.5s ease-in-out;
+  }
+
 @media (max-width: 746px) {
   .menu {
     display: none;
