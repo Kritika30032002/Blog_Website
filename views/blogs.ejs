@@ -1,24 +1,25 @@
 <%- include("partials/header"); -%>
-<div class="row my-2">
-    <% blogs.forEach(function(blog) { %>
-    <div class="col-md-4 mb-4 my-2" style="margin-bottom: 2vh;">
-      <div class="card my-2">
-        <div class="card-header">
-          <h2 class="card-title"><%= blog.title %></h2>
-        </div>
-        <div
-          class="card-body card-hover"
-          style="width: max-width; height: max-content"
-        >
-          <div class="card-content">
-            <p class="card-text"><%= blog.content.substring(0, 100) + " ..." %></p>
-            <a href="/blogs/<%= blog.title %>" class="btn btn-primary"
-              >Read more</a
-            >
-          </div>
-        </div>
-      </div>
+    <div class="grid grid-columns-3 gap-3 px-3">
+        <% blogs.forEach(function(blog) { %>
+            <div class="card"
+                style="display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 10px;">
+                <div class="card-header">
+                    <h2 class="card-title">
+                        <%= blog.title %>
+                    </h2>
+                </div>
+                <div class="card-body card-hover" style="width: max-width; height: max-content;">
+                    <div class="card-content">
+                        <p class="card-text">
+                            <%= blog.content.substring(0, 100) + " ..." %>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer" style="width: 100px;align-self: flex-end; margin-right: 20px;">
+                    <a href="/blogs/<%= blog.title %>" class="btn btn-primary">Read more</a>
+                </div>
+            </div>
+            <% }); %>
     </div>
-    <% }); %>
-  </div>
-<%- include("partials/footer"); -%>
+    </div>
+    <%- include("partials/footer"); -%>
