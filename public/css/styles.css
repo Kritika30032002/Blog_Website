@@ -1,43 +1,42 @@
 body {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #f4f4f4; /* Set your desired background color */
-    transition:
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f4f4f4; /* Set your desired background color */
+  transition:
     background-color 0.5s,
     color 0.5s;
 }
 
 .grid {
-    display: grid;
+  display: grid;
 }
 .grid-columns-3 {
-    grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto;
 }
 .gap-1 {
-    gap: 10px;
+  gap: 10px;
 }
 .gap-2 {
-    gap: 20px;
+  gap: 20px;
 }
 .gap-3 {
-    gap: 30px;
+  gap: 30px;
 }
 .gap-4 {
-    gap: 40px;
+  gap: 40px;
 }
 .px-1 {
-    padding-inline: 10px;
+  padding-inline: 10px;
 }
 .px-2 {
-    padding-inline: 20px;
+  padding-inline: 20px;
 }
 .px-3 {
-    padding-inline: 30px;
+  padding-inline: 30px;
 }
-
 
 .nav1 {
   display: flex;
@@ -95,10 +94,10 @@ body {
 }
 
 .active-nav-item {
-    color: #1abc9c !important;
-  
-    transition: color 0.5s ease-in-out;
-  }
+  color: #1abc9c !important;
+
+  transition: color 0.5s ease-in-out;
+}
 
 @media (max-width: 746px) {
   .menu {
@@ -130,11 +129,11 @@ body {
   .menu-toggle.show {
     display: block;
   }
-  #toogleicon{
+  #toogleicon {
     position: absolute;
     right: 20px;
   }
-  .navbar-logo{
+  .navbar-logo {
     position: absolute;
     left: 20px;
   }
@@ -191,6 +190,8 @@ body {
 }
 
 .footer {
+  position: fixed;
+  bottom: 0;
   text-align: center;
   padding: 10px;
   width: 100%;
@@ -208,7 +209,7 @@ body {
   color: #fff;
 }
 
-.footer a{
+.footer a {
   margin-left: 10px;
 }
 
@@ -338,7 +339,6 @@ body.dark-mode .moon-icon {
   width: 600px !important;
   font-size: 2rem;
 }
-
 
 @media screen and (max-width: 992px) {
   #unorderlist {
