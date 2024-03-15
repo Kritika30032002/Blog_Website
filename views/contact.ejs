@@ -98,7 +98,8 @@
       Host: "smtp.elasticemail.com",
       Username: "username_smtp",
       Password: "generate_from_smtp_server",
-      To: "{YOUR_EMAIL_GOES_HERE}",
+      // please add the email where conact responses are to be recieved in place of {YOUR_EMAIL}
+      To: "{YOUR_EMAIL}",
       From: `${email}`,
       Subject: `Name: ${name}`,
       Body: `<br><br> ${message} <br><br> <strong>Name:<\strong> ${name} <br> <strong>Email:<\strong> ${email}`,
