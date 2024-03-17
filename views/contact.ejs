@@ -96,9 +96,13 @@
     e.preventDefault();
     Email.send({
       Host: "smtp.elasticemail.com",
+      // Please create account on 
+      // https://app.elasticemail.com/api/create-account?_gl=1%2Ad8ieqx%2A_up%2AMQ..%2A_ga%2AMTczMDgzODM4NS4xNzEwNjg0OTY4%2A_ga_9GFVDHZ5M5%2AMTcxMDY4NDk2Ni4xLjAuMTcxMDY4NDk2Ni4wLjAuMA..&r=20b444a2-b3af-4eb8-bae7-911f6097521c
+      // and get a username and password. Add them here to allow recieval of emails 
       Username: "username_smtp",
       Password: "generate_from_smtp_server",
-      // please add the email where conact responses are to be recieved in place of {YOUR_EMAIL}
+
+
       To: "kritikagupta3003@gmail.com",
       From: `${email}`,
       Subject: `Blog Website Issue By: ${name}`,
