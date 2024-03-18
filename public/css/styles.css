@@ -135,7 +135,7 @@ body {
   }
   .navbar-logo {
     position: absolute;
-    left: 20px;
+    left: 15px;
   }
 }
 .navbar-nav li a::before {
@@ -158,8 +158,9 @@ body {
 }
 /* Make the navbar-brand text bold */
 .navbar-brand {
-  font-weight: 750;
   font-size: 24px;
+  font-weight: bold;
+  padding-left: 120px;
 }
 .logo-brand {
   display: flex;
