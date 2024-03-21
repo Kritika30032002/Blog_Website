@@ -278,13 +278,7 @@ body {
   margin-right: 30px;
 }
 
-.main-container{
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-}
-
-.detail-container, .sidebar{
+.detail-container{
   width: 80%;
   display: flex;
   margin: 3% 30px 5%;
