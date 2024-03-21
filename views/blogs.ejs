@@ -1,14 +1,15 @@
 <%- include("partials/header"); -%>
-    <div class="grid grid-columns-3 gap-3 px-3">
+    <div class="grid grid-columns-3 gap-3 px-3" style="margin-bottom:5%;">
         <% blogs.forEach(function(blog) { %>
             <div class="card"
                 style="display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 10px;">
                 <div class="card-header">
-                    <h2 class="card-title">
-                        <%= blog.title %>
-                    </h2>
+                    <a href="/blogs/<%= blog.title %>"><img src="<%= blog.image %>" class="card-image"/ alt="Image not Available"></a> 
                 </div>
                 <div class="card-body card-hover" style="width: max-width; height: max-content;">
+                    <h2 class="card-title">
+                        <a href="/blogs/<%= blog.title %>"><%= blog.title %></a>
+                    </h2>
                     <div class="card-content">
                         <p class="card-text">
                             <%= blog.content.substring(0, 100) + " ..." %>

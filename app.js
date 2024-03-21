@@ -90,10 +90,13 @@ app.post("/compose", function (req, res) {
   const post = {
     title: req.body.newTitle,
     blog: req.body.newBlog,
+    image: req.body.newImage,
   };
   const post1 = {
     title: req.body.newTitle,
     content: req.body.newBlog,
+    image: req.body.newImage,
+
   };
   posts.push(post);
   blogsData.blogs.push(post1)
@@ -133,7 +136,9 @@ app.get("/blogs/:blogName", function (req, res) {
 
     if (storedTitle === requestedTitle) {
       res.render("post", {
+        nextBlogImage: blog.image,
         nextBlogTitle: blog.title,
+        nextBlogAuthor: blog.author,
         nextBlog: blog.content,
       });
     }
