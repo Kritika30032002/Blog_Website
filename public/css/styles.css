@@ -284,7 +284,7 @@ body {
   justify-content: space-around;
 }
 
-.detail-container{
+.detail-container, .sidebar{
   width: 80%;
   display: flex;
   margin: 3% 30px 5%;
