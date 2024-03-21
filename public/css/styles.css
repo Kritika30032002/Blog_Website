@@ -244,11 +244,21 @@ body {
   background-color: #f8f8f8;
 }
 
+.card-image {
+  width: 90%;
+  height: 100%;
+  margin: 0 15px;
+  padding: 10px;
+  object-fit: cover;
+
+}
+
 .card-title {
   font-size: 22px;
   font-weight: 600;
+  margin-left: 40px;
+  margin-right: 40px;
   margin-bottom: 10px;
-  margin-left: 100px;
   color: blue;
 }
 
@@ -264,8 +274,66 @@ body {
   padding: 15px;
 }
 .card-text {
-  margin-left: 60px;
+  margin-left: 29px;
+  margin-right: 30px;
 }
+
+.main-container{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.detail-container{
+  width: 80%;
+  display: flex;
+  margin: 3% 30px 5%;
+  padding: 30px 0 40px;
+  box-shadow: 0 0 3px 0 #cccccc;
+  background-color: #fff;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.detail-title{
+  color: #000;
+  margin: 30px 0;
+  padding: 0 10px;
+  font-size: 5rem;
+  text-align: center;
+  font-family: Georgia, serif;
+}
+
+.detail-author{
+  color: #545151;
+  font-family: Georgia , Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 100;
+  font-style: italic;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.detail-author span {
+  padding: 0 10px;
+}
+
+.detail-image {
+  width: 80%;
+  height: 30%;
+  object-fit: cover;
+  object-position: center;
+  margin: 10px 40px;
+}
+
+.detail-content{
+    margin: 20px 10%;
+    font-size: 18px;
+    line-height: 1.8;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
 .btn-primary {
   background-color: #1abc9c;
   color: #fff;
