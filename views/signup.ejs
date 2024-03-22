@@ -78,6 +78,76 @@
       </button>
     </form>
   </section>
+  <button id="google-box">SignUp with&nbsp;&nbsp;&nbsp;<img src=https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/800px-Google_2015_logo.svg.png></button>
 </main>
+<br>
+<br>
+<br>
+<br>
+<script defer type="module">
+ 
+ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDUQyWodFPpaQxS6kRCDQW5AXC6EiTMg4w",
+  authDomain: "login-ba89c.firebaseapp.com",
+  projectId: "login-ba89c",
+  storageBucket: "login-ba89c.appspot.com",
+  messagingSenderId: "962798413370",
+  appId: "1:962798413370:web:7c0365a1fab3e4749e7703"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+auth.languageCode = 'en';
+const provider = new GoogleAuthProvider();
+
+document.addEventListener('DOMContentLoaded', function() {
+  const googleLogin = document.getElementById("google-box");
+  if (googleLogin) {
+    googleLogin.addEventListener("click", function() {
+      signInWithPopup(auth, provider).then((result) => {
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const user = result.user;
+        console.log(user);
+        window.location.href = "./home.ejs";
+      }).catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+      });
+    });
+  } else {
+    console.error("Element with ID 'google-box' not found.");
+  }
+});
+
+const user = auth.currentUser;
+
+  function updateUserProfile(user) {
+    const userName = user.displayName;
+    const userEmail = user.email;
+    const userProfilePicture = user.photoURL;
+    console.log(userEmail)
+
+    document.getElementById("userName").textContent = userName;
+    document.getElementById("userEmail").textContent = userEmail;
+    document.getElementById("userProfilePicture").src = userProfilePicture;
+  }
+
+  onAuthStateChanged(auth, (user) => {
+    if(user) {
+        updateUserProfile(user);
+        const uid = user.uid;
+        return uid;
+    } else {
+        alert ("Create Account & login");
+        window.location.href = "/register.html";
+    }
+  });
+
+updateUserProfile();
+
+</script>
 
 <%- include("partials/footer"); -%>

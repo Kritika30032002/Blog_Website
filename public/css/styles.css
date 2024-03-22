@@ -385,3 +385,22 @@ body.dark-mode .moon-icon {
 .contact.dark-mode {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.36);
 }
+
+#google-box {
+  background-color: #1abc9c;
+  height:75px;
+  width: 400px;
+  color: white;
+  font-weight: 2rem;
+  margin-left: 250px;
+  padding-left: 5px;
+  padding-top: 14px;
+  margin-top: 20px;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+#google-box img {
+  height: 50px;
+  width: 150px;
+}
