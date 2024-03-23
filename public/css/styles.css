@@ -404,3 +404,7 @@ body.dark-mode .moon-icon {
   height: 50px;
   width: 150px;
 }
+
+.footer-padding {
+    margin-top: 90px;
+}
