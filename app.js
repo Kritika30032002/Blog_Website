@@ -41,7 +41,10 @@ app.use(
   })
 );
 app.use(express.static("public"));
-app.use(session(sessionConfig));
+app.use(session({
+  ...sessionConfig,
+  secret: "your-secret-key"
+}));
 app.use(express.json());
 app.use(passport.initialize());
 app.use(passport.session());

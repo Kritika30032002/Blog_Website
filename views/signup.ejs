@@ -61,7 +61,9 @@
           border-radius: 4px;
           color: black;
         "
+        oninput="checkPasswordStrength(this.value)"
       />
+      <span id="passwordStrength"></span>
 
       <button
         type="submit"
@@ -78,6 +80,51 @@
       </button>
     </form>
   </section>
+  <script>
+    function checkPasswordStrength(password) {
+      var passwordStrength = document.getElementById("passwordStrength");
+      var strength = 0;
+
+      // Check password length
+      if (password.length >= 8) {
+        strength += 1;
+      }
+
+      // Check for uppercase letters
+      if (/[A-Z]/.test(password)) {
+        strength += 1;
+      }
+
+      // Check for lowercase letters
+      if (/[a-z]/.test(password)) {
+        strength += 1;
+      }
+
+      // Check for numbers
+      if (/[0-9]/.test(password)) {
+        strength += 1;
+      }
+
+      // Check for special characters
+      if (/[^A-Za-z0-9]/.test(password)) {
+        strength += 1;
+      }
+
+      // Update password strength indicator
+      if (strength == 0) {
+        passwordStrength.innerHTML = "";
+      } else if (strength <= 2) {
+        passwordStrength.innerHTML = "Weak";
+        passwordStrength.style.color = "red";
+      } else if (strength <= 4) {
+        passwordStrength.innerHTML = "Medium";
+        passwordStrength.style.color = "orange";
+      } else {
+        passwordStrength.innerHTML = "Strong";
+        passwordStrength.style.color = "green";
+      }
+    }
+  </script>
 </main>
 
 <%- include("partials/footer"); -%>
