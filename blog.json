@@ -2,27 +2,32 @@
   "type": "module",
   "blogs": [
     {
-      "id": 1,
-      "title": "Embracing the Art of Mindfulness",
+      "id": 4,
+      "image": "https://images.unsplash.com/photo-1602192509154-0b900ee1f851?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bWVkaXRhdGlvbnxlbnwwfHwwfHx8MA%3D%3D",
+      "title": "Exploring the World of Meditation",
       "author": "Mindful Maven",
-      "content": "In the hustle and bustle of modern life, finding moments of stillness becomes a precious endeavor. Mindfulness, the practice of being present in the current moment without judgment, offers a serene refuge in our fast-paced world. Picture yourself in a quiet space, surrounded by nature's symphony. As you take a deep breath, feel the cool breeze on your skin. Inhale, exhale – a simple rhythm that connects you with the essence of now. Mindfulness isn't about emptying the mind but rather observing thoughts without attachment. It's a journey inward, exploring the depths of your consciousness. Through regular practice, you cultivate a profound awareness that extends to your daily experiences. Embrace mindfulness as a gift to yourself. Let it be the compass guiding you through the ebb and flow of life. In this oasis of tranquility, discover the art of mindfulness and unlock a world of inner peace and clarity."
+      "content": "Meditation is a journey inward, a pathway to inner peace and self-discovery. In the stillness of meditation, one can find solace and clarity. Dive into the world of mindfulness and explore the transformative power of quiet reflection."
     },
     {
       "id": 2,
+      "image": "https://images.unsplash.com/photo-1690844623570-b5304dceae3b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW9ybmluZyUyMHJpdHVhbHN8ZW58MHx8MHx8fDA%3D",
       "title": "The Magic of Morning Rituals",
       "author": "Rise-and-Shine Enthusiast",
       "content": "The way you start your morning sets the tone for the entire day. Embrace the magic of morning rituals to foster positivity and productivity. Begin with a mindful moment – savor your first cup of coffee or tea. Let the warmth and aroma awaken your senses. Engage in gentle stretching to invigorate your body. As you breathe deeply, visualize your goals for the day. Journal your thoughts and set intentions. Establishing a morning routine creates a sense of stability and purpose. Whether it's a brisk walk, reading a chapter, or a moment of gratitude, find rituals that resonate with you. Harness the power of mornings to create a life that aligns with your aspirations."
     },
     {
       "id": 3,
+      "image": "https://media.istockphoto.com/id/1428409996/photo/closeup-of-female-chef-in-restaurant-decorates-the-meal.webp?b=1&s=170667a&w=0&k=20&c=iUbrN968TVR32sU8x6OCQbHrIUSJorIEZjWQI2d7P-w=",
       "title": "Culinary Adventures",
       "author": "Epicurean Explorer",
       "content": "Embark on a culinary journey to nourish your soul and delight your taste buds. Explore diverse flavors, textures, and aromas that elevate the dining experience. Start with simple pleasures – a homemade meal shared with loved ones. Experiment with ingredients, infuse creativity into your dishes, and savor the joy of cooking. Venture beyond your comfort zone and indulge in global cuisines. Discover the stories behind each recipe and the cultural tapestry woven into every bite. From the sizzle of a pan to the harmony of spices, culinary adventures awaken the senses. Embrace the art of cooking as a form of self-expression and a celebration of life's rich tapestry."
     },
     {
-      "id":4,
-      "title": "Exploring the World of Meditation",
-      "content": "Meditation is a journey inward, a pathway to inner peace and self-discovery. In the stillness of meditation, one can find solace and clarity. Dive into the world of mindfulness and explore the transformative power of quiet reflection."
+      "id": 1,
+      "title": "Embracing the Art of Mindfulness",
+      "image": "https://media.istockphoto.com/id/1437656226/photo/three-people-meditating-outdoors.jpg?s=1024x1024&w=is&k=20&c=SAcBmuOBsxt6PmcdL2s1VjunEBcD65sJ9Q8xgmoimeA=",
+      "author": "Mindful Maven",
+      "content": "In the hustle and bustle of modern life, finding moments of stillness becomes a precious endeavor. Mindfulness, the practice of being present in the current moment without judgment, offers a serene refuge in our fast-paced world. Picture yourself in a quiet space, surrounded by nature's symphony. As you take a deep breath, feel the cool breeze on your skin. Inhale, exhale – a simple rhythm that connects you with the essence of now. Mindfulness isn't about emptying the mind but rather observing thoughts without attachment. It's a journey inward, exploring the depths of your consciousness. Through regular practice, you cultivate a profound awareness that extends to your daily experiences. Embrace mindfulness as a gift to yourself. Let it be the compass guiding you through the ebb and flow of life. In this oasis of tranquility, discover the art of mindfulness and unlock a world of inner peace and clarity."
     },
     {
       "id":5,

@@ -1,6 +1,16 @@
 <%- include("partials/header"); -%>
 
- <h1> <%=nextBlogTitle%></h1>
-   <p style="margin: 0 20px;">  <%=nextBlog%> </p>
+    <div class="detail-container ">
+        <h1 class="detail-title"> <%=nextBlogTitle%></h1>
+        <div class="detail-author">
+            <span> by: <%=nextBlogAuthor%></span> . 
+            <!-- Add published date here after updating the blogs -->
+            <span> March 18th, 2024</span>
+        </div>
+        <img class="detail-image" src="<%=nextBlogImage%>" alt="Image not Available"/>
+        <div class="detail-content">
+            <p>  <%=nextBlog%> </p>
+        </div>
+    </div>
 
 <%- include("partials/footer"); -%>
