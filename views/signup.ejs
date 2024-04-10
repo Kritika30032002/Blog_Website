@@ -53,6 +53,8 @@
         placeholder="Enter password"
         required
         minlength="5"
+        pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{5,}$"
+        title="Minimum five characters, at least one letter, one number and one special character"
         style="
           width: 100%;
           padding: 10px;
