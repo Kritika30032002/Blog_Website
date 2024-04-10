@@ -1,4 +1,4 @@
-<link
+<!-- <link
   rel="stylesheet"
   type="text/css"
   href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
@@ -32,7 +32,7 @@
     left: 43vw;
   "
 >
-  HOME
+  HOMEEE
 </button>
 <script
   type="text/javascript"
@@ -46,4 +46,24 @@
     position: "center",
     backgroundColor: "red",
   }).showToast();
-</script>
+</script> 
+-->
+
+
+<div align="center">
+  <img src="error.svg" height="80%" />
+  <br/>
+  <br/>
+  <br/>
+  <a href="/" style="background-color: #2C3A47; color: white; padding: 1rem;font-weight: 800;text-decoration: none;border-radius: 5px;margin-top: 5em;font-family: 'Times New Roman', Times, serif;">HOME</a>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    let error = <%- JSON.stringify(error1.message) %> 
+    Swal.fire({
+    icon: "error",
+    title: error,
+    text: "Something went wrong!",
+  });
+  </script> 
