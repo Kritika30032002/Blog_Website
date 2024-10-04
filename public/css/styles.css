@@ -230,7 +230,7 @@ body {
 }
 
 .card {
-  border: 1px solid #e0e0e0;
+  /* border: 1px solid #e0e0e0; */
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition:
@@ -242,7 +242,7 @@ body {
 .card:hover {
   transform: scale(1.01);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  background-color: #f8f8f8;
+  /* background-color: #f8f8f8; */
 }
 
 .card-image {
@@ -277,6 +277,24 @@ body {
 .card-text {
   margin-left: 29px;
   margin-right: 30px;
+}
+/* Dark Mode Styles */
+.dark-mode .card {
+  background-color: #333;
+  color: #e0e0e0;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .card:hover {
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .card-title {
+  color: #90caf9;
+}
+
+.dark-mode .card-content {
+  color: #bbb;
 }
 
 .detail-container{
@@ -446,4 +464,4 @@ body.dark-mode .moon-icon {
 }
 .contact.dark-mode {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.36);
-}
+} 
