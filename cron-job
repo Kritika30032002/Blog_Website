@@ -1,0 +1,37 @@
+# How to Set Up a Cron Job to Ping the Server
+
+To ensure that the backend server hosted on Render does not go idle (resulting in a cold start), we’ve set up a cron job that pings the server every 30 minutes. This prevents the server from going inactive, thus ensuring faster response times for users.
+
+### Steps to Set Up the Cron Job
+
+1. **Open the crontab** on your server:
+   ```bash
+   crontab -e
+   ```
+
+2. **Add the following cron job** to the file. This cron job will send an HTTP request to the backend server every 30 minutes to prevent it from going idle:
+   ```bash
+   */30 * * * * curl https://blog-tui6.onrender.com/ > /dev/null 2>&1
+   ```
+   - The `> /dev/null 2>&1` ensures that no output or error messages are logged.
+
+3. **Save and close the crontab** file.
+
+### Cron Job Explanation:
+
+- `*/30 * * * *` – This means the cron job will run every 30 minutes.
+- `curl` – This is used to make an HTTP request to the backend.
+- `> /dev/null 2>&1` – This discards any output or error messages.
+
+### Verifying the Cron Job:
+
+To ensure the cron job is working correctly:
+1. **List your current cron jobs**:
+   ```bash
+   crontab -l
+   ```
+2. Verify that the job has been added successfully and is listed.
+
+Now the server will be pinged every 30 minutes, preventing cold starts and improving user experience by ensuring faster load times.
+
+I have did this alredy for you, now the server will be pinged every 30mins, to keep it active.
