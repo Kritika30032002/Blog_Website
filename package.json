@@ -11,11 +11,13 @@
   "author": "Kritika Gupta",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "body-parser": "^1.18.3",
     "dotenv": "^16.3.1",
     "ejs": "^3.1.8",
     "express": "^4.16.3",
     "express-session": "^1.17.3",
+    "jsonwebtoken": "^9.0.2",
     "lodash": "^4.17.21",
     "mongoose": "^7.6.3",
     "passport": "^0.6.0",
