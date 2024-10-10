@@ -1,17 +1,18 @@
 <div align="center">
   <img src="error.svg" height="80%" />
-  <br/>
-  <br/>
-  <br/>
-  <a href="/" style="background-color: #2C3A47; color: white; padding: 1rem;font-weight: 800;text-decoration: none;border-radius: 5px;margin-top: 5em;font-family: 'Times New Roman', Times, serif;">HOME</a>
+  <br />
+  <br />
+  <br />
+  <a href="/"
+    style="background-color: #2C3A47; color: white; padding: 1rem;font-weight: 800;text-decoration: none;border-radius: 5px;margin-top: 5em;font-family: 'Times New Roman', Times, serif;">HOME</a>
 </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script>
-    let error = <%- JSON.stringify(error1.message) %> 
-    Swal.fire({
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+  // let error = <%- JSON.stringify(error1.message) %> 
+  Swal.fire({
     icon: "error",
     title: error,
     text: "Something went wrong!",
   });
-  </script> 
+</script>
