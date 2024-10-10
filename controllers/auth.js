@@ -1,4 +1,5 @@
 const { User } = require("../models/auth");
+const bcrypt = require('bcrypt')
 
 // Render sign-up page
 module.exports.signUpPage = (req, res) => {
@@ -23,15 +24,20 @@ module.exports.signUp = async (req, res, next) => {
 
   try {
     // Register the new user
-    const registeredUser = await User.register(newUser, password);
+    bcrypt.hash(password, 10,async function(err, hash) {
+      // Store hash in your password DB.
+      const registeredUser = await User.register(newUser, password);
+      console.log(registeredUser);
+      
+      // Log in the user after registration
+      await req.logIn(registeredUser, (err) => {
+        if (err) {
+          return res.render("error", { error1: err });
+        }
+        res.redirect("/home");
+      });
+  });
 
-    // Log in the user after registration
-    await req.logIn(registeredUser, (err) => {
-      if (err) {
-        return res.render("error", { error1: err });
-      }
-      res.redirect("/home");
-    });
   } catch (error) {
     // Handle registration error
     res.render("error", {
