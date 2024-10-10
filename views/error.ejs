@@ -6,12 +6,16 @@
   <a href="/" style="background-color: #2C3A47; color: white; padding: 1rem;font-weight: 800;text-decoration: none;border-radius: 5px;margin-top: 5em;font-family: 'Times New Roman', Times, serif;">HOME</a>
 </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script>
-    let error = <%- JSON.stringify(error1.message) %> 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+  // Safely pass error message to JavaScript
+  let error = "<%= typeof error1 === 'object' ? error1.message : error1 %>";
+  
+  if (error) {
     Swal.fire({
-    icon: "error",
-    title: error,
-    text: "Something went wrong!",
-  });
-  </script> 
+      icon: "error",
+      title: error,
+      text: "Something went wrong!",
+    });
+  }
+</script>

@@ -8,34 +8,49 @@ module.exports.signUpPage = (req, res) => {
 // Handle sign-up logic
 module.exports.signUp = async (req, res, next) => {
   const { name, email, password } = req.body;
-  const newUser = new User({ name, email });
+
+  // Check if the email is already registered
+  const existingUser = await User.findOne({ email });
+// console.log(existingUser);
+
+  if (existingUser) {
+    return res.render("error", {
+      error1: "A user with this email already exists.",
+    });
+  }
 
   // Regular expressions for password validation
   const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;
   const capitalLetterRegex = /[A-Z]/;
+// console.log(!capitalLetterRegex.test(password));
 
   // Check if the password meets the criteria
-  if (!specialCharRegex.test(password) || !capitalLetterRegex.test(password)) {
+  if (password.length < 6 || !specialCharRegex.test(password) || !capitalLetterRegex.test(password)) {
     return res.render("error", {
-      error1: "Password must contain at least one special character and one capital letter",
+      error1: "Password must be at least 8 characters long, contain at least one special character, and one capital letter",
     });
   }
 
+  const newUser = new User({ name, email });
+    console.log(newUser);
+    
   try {
     // Register the new user
     const registeredUser = await User.register(newUser, password);
+    console.log(registeredUser);
 
     // Log in the user after registration
-    await req.logIn(registeredUser, (err) => {
+    req.logIn(registeredUser, (err) => {
       if (err) {
-        return res.render("error", { error1: err });
+        return res.render("error", { error1: "Error logging in after registration." });
       }
       res.redirect("/home");
     });
   } catch (error) {
     // Handle registration error
-    res.render("error", {
-      error1: error,
+    console.error(error);
+    return res.render("error", {
+      error1: "Registration failed. Please try again.",
     });
   }
 };
