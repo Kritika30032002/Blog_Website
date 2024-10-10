@@ -465,3 +465,10 @@ body.dark-mode .moon-icon {
 .contact.dark-mode {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.36);
 } 
+.contact p {
+  margin: 15px 0px;
+}
+.contact a {
+  color: #169c7f;
+  font-weight: bold;
+}
