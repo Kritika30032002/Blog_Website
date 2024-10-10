@@ -31,7 +31,7 @@ Before you begin, make sure you have the following prerequisites installed on yo
    Clone this repository to your local machine:
 
    ```
-   git clone https://github.com/yourusername/blog-website.git
+   git clone https://github.com/yourusername/blog_website.git
    ```
    
 2. **Navigate to the Project Directory**
