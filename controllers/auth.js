@@ -22,8 +22,11 @@ module.exports.signUp = async (req, res, next) => {
   }
 
   try {
+
     // Register the new user
-    const registeredUser = await User.register(newUser, password);
+    const registeredUser = await User.create({
+      name,email,password
+    });
 
     // Log in the user after registration
     await req.logIn(registeredUser, (err) => {
