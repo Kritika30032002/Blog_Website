@@ -71,7 +71,7 @@ We’re excited to have you contribute to this project! Follow these simple step
    - Once the repository is forked, clone it to your local machine. Open your terminal and run:
     ``` bash
      git clone
-     
+      https://github.com/Kritika30032002/Blog_Website.git
     ```
      
    - Replace your-username with your GitHub username.
