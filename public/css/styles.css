@@ -297,55 +297,73 @@ body {
   color: #bbb;
 }
 
-.detail-container{
+.detail-container {
   width: 80%;
   display: flex;
   margin: 3% 30px 5%;
   padding: 30px 0 40px;
   box-shadow: 0 0 3px 0 #cccccc;
-  background-color: #fff;
+  background-color: #fff; 
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  transition: background-color 0.5s, color 0.5s; 
 }
 
 .detail-title{
-  color: #000;
+  color: #000; 
   margin: 30px 0;
   padding: 0 10px;
   font-size: 5rem;
   text-align: center;
   font-family: Georgia, serif;
+  transition: color 0.5s;
 }
 
 .detail-author{
-  color: #545151;
-  font-family: Georgia , Helvetica, Arial, sans-serif;
+  color: #545151; 
+  font-family: Georgia, Helvetica, Arial, sans-serif;
   font-size: 17px;
   font-weight: 100;
   font-style: italic;
   margin-bottom: 10px;
   padding: 0;
-}
-
-.detail-author span {
-  padding: 0 10px;
+  transition: color 0.5s; 
 }
 
 .detail-image {
   width: 80%;
-  height: 30%;
+  height: auto; /* Maintain aspect ratio */
   object-fit: cover;
   object-position: center;
   margin: 10px 40px;
 }
 
-.detail-content{
-    margin: 20px 10%;
-    font-size: 18px;
-    line-height: 1.8;
-    font-family: Helvetica, Arial, sans-serif;
+.detail-content {
+  margin: 20px 10%;
+  font-size: 18px;
+  line-height: 1.8;
+  font-family: Helvetica, Arial, sans-serif;
+  transition: color 0.5s; 
 }
+
+/* Dark Mode Styles for Post.ejs*/
+body.dark-mode .detail-container {
+  background-color: #333; 
+}
+
+body.dark-mode .detail-title {
+  color: #90caf9; 
+}
+
+body.dark-mode .detail-author {
+  color: #bbb; 
+}
+
+body.dark-mode .detail-content {
+  color: #e0e0e0; 
+}
+
 
 .btn-primary {
   background-color: #1abc9c;
