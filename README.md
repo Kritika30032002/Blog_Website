@@ -64,7 +64,7 @@ SESSION_SECRET=your_session_secret
 We’re excited to have you contribute to this project! Follow these simple steps to get started:
 
 1. **🍴 Fork the Repository**  
-   - Go to the [repository page]().
+   - Go to the [repository page](https://github.com/Kritika30032002/Blog_Website).
    - Click the *Fork* button (top right). This creates a copy of the project in your GitHub account.
 
 2. **💻 Clone Your Fork**  
@@ -108,7 +108,7 @@ We’re excited to have you contribute to this project! Follow these simple step
      
 
 8. **🔄 Create a Pull Request (PR)** 
-   - Go back to the original repository [here]().
+   - Go back to the original repository [here](https://github.com/Kritika30032002/Blog_Website).
    - Click the *Compare & pull request* button.
    - Write a short description of your changes and submit the pull request (PR).
 
