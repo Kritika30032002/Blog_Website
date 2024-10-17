@@ -1,3 +1,11 @@
+const Blog = require('./models/blog');
+const Category = require('/models/category');
+const categoryRoutes = require('./routes/categoryRoutes');
+app.use(categoryRoutes);
+const blogRoutes = require('./routes/blogRoutes');
+app.use(blogRoutes);
+const blogRoutes = require('./routes/blogRoutes'); // Adjust the path as necessary
+app.use(blogRoutes); // Use the blog routes
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
