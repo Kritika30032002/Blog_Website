@@ -5,9 +5,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-color: #f4f4f4; /* Set your desired background color */
-  transition:
-    background-color 0.5s,
-    color 0.5s;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 .grid {
@@ -56,9 +54,7 @@ body {
   font-size: 12px;
   letter-spacing: 2px;
   width: 100%;
-  transition:
-    background-color 0.5s,
-    color 0.5s;
+  transition: background-color 0.5s, color 0.5s;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -89,20 +85,17 @@ body {
 }
 .navbar-nav li a:hover {
   color: #1abc9c !important;
-
   transition: color 0.5s ease-in-out;
 }
 
 .active-nav-item {
   color: #1abc9c !important;
-
   transition: color 0.5s ease-in-out;
 }
 
 @media (max-width: 746px) {
   .menu {
     display: none;
-
     position: absolute;
     top: 60px;
     left: 0;
@@ -142,7 +135,6 @@ body {
   content: "";
   position: absolute;
   background: #1abc9c;
-
   width: 100%;
   height: 4px;
   left: 10%;
@@ -198,9 +190,7 @@ body {
   width: 100%;
   height: auto;
   background-color: #1abc9c;
-  transition:
-    background-color 0.5s,
-    color 0.5s;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 .footer p,
@@ -233,9 +223,7 @@ body {
   /* border: 1px solid #e0e0e0; */
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition:
-    transform 0.2s,
-    box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
   background-color: #fff;
 }
 
@@ -251,7 +239,6 @@ body {
   margin: 0 15px;
   padding: 10px;
   object-fit: cover;
-
 }
 
 .card-title {
@@ -310,7 +297,7 @@ body {
   transition: background-color 0.5s, color 0.5s; 
 }
 
-.detail-title{
+.detail-title {
   color: #000; 
   margin: 30px 0;
   padding: 0 10px;
@@ -320,7 +307,7 @@ body {
   transition: color 0.5s;
 }
 
-.detail-author{
+.detail-author {
   color: #545151; 
   font-family: Georgia, Helvetica, Arial, sans-serif;
   font-size: 17px;
@@ -347,7 +334,7 @@ body {
   transition: color 0.5s; 
 }
 
-/* Dark Mode Styles for Post.ejs*/
+/* Dark Mode Styles for Post.ejs */
 body.dark-mode .detail-container {
   background-color: #333; 
 }
@@ -363,7 +350,6 @@ body.dark-mode .detail-author {
 body.dark-mode .detail-content {
   color: #e0e0e0; 
 }
-
 
 .btn-primary {
   background-color: #1abc9c;
@@ -448,7 +434,6 @@ body.dark-mode .moon-icon {
   }
   .menu {
     display: none;
-
     position: absolute;
     top: 60px;
     left: 0;
