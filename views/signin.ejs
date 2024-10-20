@@ -1,14 +1,90 @@
 <%- include("partials/header"); -%>
+<style>
+  body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Main container */
+main {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15rem;
+}
+
+/* Contact Section Styling */
+.contact {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 350px;
+}
+
+/* Heading styling */
+.contact h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4CAF50; /* Greenish heading */
+}
+
+/* Form Label styling */
+.contact label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Input field styling */
+.contact input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/* Button styling */
+.contact button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background-color: #45a049; /* Darken the green */
+}
+
+/* Sign-in link styling */
+.contact p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.contact p a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.contact p a:hover {
+  text-decoration: underline;
+}
+</style>
 <main style="margin-top: 10px">
   <section id="contact" class="contact">
-    <h2
-      style="
-        font-size: 27px;
-        margin-bottom: 20px;
-        font-weight: 500;
-        color: #1abc9c;
-      "
-    >
+    <h2>
       Sign In
     </h2>
 
@@ -19,14 +95,6 @@
         id="email"
         name="email"
         required
-        style="
-          width: 100%;
-          padding: 10px;
-          margin: 5px 0;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          color: #000;
-        "
       />
 
       <label for="password">Password:</label>
@@ -37,31 +105,14 @@
         name="password"
         required
         minlength="5"
-        style="
-          width: 100%;
-          padding: 10px;
-          margin: 5px 0;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          color: #000;
-        "
       />
 
       <button
         type="submit"
-        style="
-          background-color: #1abc9c;
-          color: #fff;
-          padding: 10px 20px;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-          margin-top: 10px;
-        "
       >
         Sign In
       </button>
-      <p>Don't have an account? <a href="/signup"><u>Sign up</u></a></p>
+      <p>Already have an account? <a href="/signup"><u>Sign in</u></a></p>
     </form>
   </section>
 </main>

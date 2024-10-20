@@ -1,14 +1,98 @@
 <%- include("partials/header"); -%>
-<main style="margin-top: 10px">
+<style>
+/* Reset some basic styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  height: 100%;
+}
+
+/* Main container */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Contact section */
+.contact {
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 400px; /* Fixed width for a clean layout */
+  text-align: center;
+  margin-bottom: 10rem;
+}
+
+.contact h2 {
+  font-size: 24px;
+  color: #4CAF50; /* Greenish heading */
+  margin-bottom: 15px;
+}
+
+.contact p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Form input styling */
+form label {
+  display: block;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+form textarea {
+  resize: none; /* Disable resizing of the textarea */
+}
+
+/* Button styling */
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #45a049; /* Darken green on hover */
+}
+
+/* Small screen responsiveness */
+@media (max-width: 500px) {
+  .contact {
+    width: 90%; /* Make it more responsive on smaller screens */
+  }
+}
+
+</style>
+<main >
   <section class="contact contact-default" id="contact">
-    <h2
-      style="
-        font-size: 27px;
-        margin-bottom: 20px;
-        font-weight: 500;
-        color: #1abc9c;
-      "
-    >
+    <h2>
       Contact Us
     </h2>
     <p>
@@ -24,14 +108,7 @@
         name="name"
         id="name"
         required
-        style="
-          width: 100%;
-          padding: 10px;
-          margin: 5px 0;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          color: black;
-        "
+      
       />
 
       <label for="email">Email:</label>
@@ -41,14 +118,7 @@
         name="email"
         id="email"
         required
-        style="
-          width: 100%;
-          padding: 10px;
-          margin: 5px 0;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          color: black;
-        "
+
       />
 
       <label for="message">Message:</label>
@@ -58,27 +128,13 @@
         rows="4"
         id="message"
         required
-        style="
-          width: 100%;
-          padding: 10px;
-          margin: 5px 0;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          color: #000;
-        "
+
       ></textarea>
 
       <button
         type="submit"
         id="send_button"
-        style="
-          background-color: #1abc9c;
-          color: #fff;
-          padding: 10px 20px;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-        "
+
       >
         Send Message
       </button>
