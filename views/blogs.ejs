@@ -1,26 +1,106 @@
 <%- include("partials/header"); -%>
-    <div class="grid grid-columns-3 gap-3 px-3" style="margin-bottom:5%;">
-        <% blogs.forEach(function(blog) { %>
-            <div class="card"
-                style="display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 10px;">
-                <div class="card-header">
-                    <a href="/blogs/<%= blog.title %>"><img src="<%= blog.image %>" class="card-image"/ alt="Image not Available"></a> 
-                </div>
-                <div class="card-body card-hover" style="width: max-width; height: max-content;">
-                    <h2 class="card-title">
-                        <a href="/blogs/<%= blog.title %>"><%= blog.title %></a>
-                    </h2>
-                    <div class="card-content">
-                        <p class="card-text">
-                            <%= blog.content.substring(0, 100) + " ..." %>
-                        </p>
-                    </div>
-                </div>
-                <div class="card-footer" style="width: 100px;align-self: flex-end; margin-right: 20px;">
-                    <a href="/blogs/<%= blog.title %>" class="btn btn-primary">Read more</a>
+
+<!-- Search Bar Section -->
+<div class="search-bar-container" style="margin-bottom: 20px; text-align: center;">
+    <div class="search-input-container">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="search-input" placeholder="Search blogs by title..." class="search-input" />
+    </div>
+</div>
+
+<div class="grid grid-columns-3 gap-3 px-3" style="margin-bottom:5%;">
+    <% blogs.forEach(function(blog) { %>
+        <div class="card"
+            style="display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 10px;">
+            <div class="card-header">
+                <a href="/blogs/<%= blog.title %>">
+                    <img src="<%= blog.image %>" class="card-image" alt="Image not Available" />
+                </a>
+            </div>
+            <div class="card-body card-hover" style="width: max-width; height: max-content;">
+                <h2 class="card-title">
+                    <a href="/blogs/<%= blog.title %>"><%= blog.title %></a>
+                </h2>
+                <div class="card-content">
+                    <p class="card-text">
+                        <%= blog.content.substring(0, 100) + " ..." %>
+                    </p>
                 </div>
             </div>
-            <% }); %>
-    </div>
-    </div>
-    <%- include("partials/footer"); -%>
+            <div class="card-footer" style="width: 100px; align-self: flex-end; margin-right: 20px;">
+                <a href="/blogs/<%= blog.title %>" class="btn btn-primary">Read more</a>
+            </div>
+        </div>
+    <% }); %>
+</div>
+
+<%- include("partials/footer"); -%>
+
+<!-- Styles -->
+<style>
+    .search-bar-container {
+        position: relative;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .search-input-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #007BFF;
+        border-radius: 25px;
+        padding: 5px;
+        width: 300px;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .search-input {
+        padding: 12px 20px 12px 40px; 
+        border: none; 
+        border-radius: 25px; 
+        font-size: 16px;
+        width: 100%; 
+    }
+
+    .search-input:focus {
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    .search-icon {
+        color: #007BFF; 
+        font-size: 18px; 
+        position: absolute; 
+        left: 10px; 
+        pointer-events: none; 
+    }
+
+    .search-input::placeholder {
+        color: #3d3939; 
+        font-style: italic; 
+    }
+
+    .search-input:focus::placeholder {
+        color: transparent; 
+    }
+</style>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script>
+    const searchInput = document.getElementById('search-input');
+    const cards = document.querySelectorAll('.card');
+
+    searchInput.addEventListener('input', function() {
+        const searchTerm = searchInput.value.toLowerCase();
+        
+        cards.forEach(function(card) {
+            const title = card.querySelector('.card-title a').innerText.toLowerCase();
+            if (title.includes(searchTerm)) {
+                card.style.display = 'flex'; 
+            } else {
+                card.style.display = 'none'; 
+            }
+        });
+    });
+</script>
